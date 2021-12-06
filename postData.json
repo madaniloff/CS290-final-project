@@ -51,10 +51,21 @@
     {
         "type": "item",
         "title": "Deck of Fate",
-        "headings": ["Fates Undrawn"],
+        "headings": ["Effects"],
         "content": ["Upon drawing a card from this deck of cards, the fate of the drawer is forever shifted. Only one drawn card may take effect per person. \n \n Crown: You have friends in high places. Some choice knowledge will come your way from the master of this realm \n Sun: The world revolves around you. The gods would like your attention. \n Moon: You are attuned to the world’s greatest mysteries. You will experience what others do not. \n Star: You are a beacon of hope, warmth, and radiance. Others will rally to your cause. \n Comet: You are a fleeting rarity. Your actions will not go unnoticed. \n The Fates: The master of this realm will consult with you \n Throne: You command an aura of importance. You deserve more. \n Key: The world is open to you. You will know the way. \n Knight: You have been chosen. Guard the Deck, and it will grant you a boon. \n Gem: You are valuable. You will be protected and cherished. \n Talons: The claws dig in. You are restricted, but you know not how. \n Void: You are nothing. You will be treated as such. \n Flames: Your world will burn around you. A devil delights in your suffering. \n Skull: Death would like to make a deal. \n Idiot: Nothing has changed. \n Dungeon: The world is a dangerous place. You may encounter traps wherever you go. \n Ruin: Your greatest achievements will lie in shambles. Your name will be forever besmirched. \n Euryale: Fear can be petrifying. In crucial moments, you will fail. \n Rogue: Trust is a dangerous thing. You will be betrayed. \n Balance: All must remain in alignment. Your actions will have equal and opposite reactions. \n Fool: You know not what you are. You are prone to delusion. \n Jester: The world laughs behind your back. You are difficult to take seriously."],
         "imageURL": "",
         "rarity": "Wondrous, Very Rare",
+        "item-type": "Trinket",
         "weight": "—"
+    },
+    {
+        "type": "item",
+        "title": "Soul Juicer",
+        "headings": ["Properties", "Effects"],
+        "content": ["Two-Handed, Heavy \n 2d6 Bludgeoning", "You have a +1 bonus to attack rolls made with this magic weapon. \n \n When you hit with a melee attack using this magic maul and reduce the target to 0 hit points, you gain 2d6 temporary hit points."],
+        "imageURL": "",
+        "rarity": "Uncommon",
+        "item-type": "Maul",
+        "weight": ""
     }
 ]
