@@ -24,7 +24,18 @@
         "leader": "Felix Devlin",
         "location": "Northern Hemisphere, around the Major Key",
         "size": "~3.5 million square miles",
-        "population": "~100 million, ~200 million clockwork soldiers",
+        "population": "~100 million humans, ~200 million clockwork soldiers",
         "date": "12th of Tilt, 1245 - Present"
+    },
+    {
+        "type": "encounter",
+        "title": "Prismati Deposit",
+        "headings": ["Tears of the Celestials.", "Irresistible Brilliance."],
+        "content": ["An ore of purest brilliance, prismati is said to be the tears of the celestials themselves. When the celestial wars cracked the sky, they sent a shower of brilliance down upon Omnaeus. Prismati is the concentrated essence of all of the faith held by a particular celestial, released at once in a solid form as a celestial undergoes true death. It is unknown what use it may serve, but its very nature makes it irresistible to most.",
+        "Upon seeing prismati, a creature must make a DC 12 Wisdom saving throw. On a success, a creature is immune to this effect for the next hour. On a failure, a creature feels compelled to acquire and possess the prismati for the next hour. A compelled creature will do what it can to acquire the prismati, but it will not do anything that it would never do otherwise, such as harming a loved one. /n This primati holds the essence of Trixan, a trickster celestial god who seeks to return to the Brainstorm."],
+        "imageURL": "",
+        "region": "Mountainous",
+        "level": "2",
+        "characters": "Trixan"
     }
 ]
