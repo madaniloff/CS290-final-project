@@ -32,7 +32,7 @@
         "title": "Prismati Deposit",
         "headings": ["Tears of the Celestials.", "Irresistible Brilliance."],
         "content": ["An ore of purest brilliance, prismati is said to be the tears of the celestials themselves. When the celestial wars cracked the sky, they sent a shower of brilliance down upon Omnaeus. Prismati is the concentrated essence of all of the faith held by a particular celestial, released at once in a solid form as a celestial undergoes true death. It is unknown what use it may serve, but its very nature makes it irresistible to most.",
-        "Upon seeing prismati, a creature must make a DC 12 Wisdom saving throw. On a success, a creature is immune to this effect for the next hour. On a failure, a creature feels compelled to acquire and possess the prismati for the next hour. A compelled creature will do what it can to acquire the prismati, but it will not do anything that it would never do otherwise, such as harming a loved one. /n This primati holds the essence of Trixan, a trickster celestial god who seeks to return to the Brainstorm."],
+        "Upon seeing prismati, a creature must make a DC 12 Wisdom saving throw. On a success, a creature is immune to this effect for the next hour. On a failure, a creature feels compelled to acquire and possess the prismati for the next hour. A compelled creature will do what it can to acquire the prismati, but it will not do anything that it would never do otherwise, such as harming a loved one. /n /n This primati holds the essence of Trixan, a trickster celestial god who seeks to return to the Brainstorm."],
         "imageURL": "",
         "region": "Mountainous",
         "level": "2",
@@ -43,9 +43,18 @@
         "title": "Grorg's Bridge",
         "headings": ["Interdimensional Ogre"],
         "content": ["Grorg is a nice ogre who guards both sides of a bridge across the river at once, believing that he is protecting travelers from a cruel ogre who waits on the other side. \n A time anomaly prevents Grorg from ever crossing the bridge to meet his other self."],
-        "imageUrl": "",
+        "imageURL": "",
         "region": "River",
         "level": 2,
         "characters": "Grorg"
+    },
+    {
+        "type": "item",
+        "title": "Deck of Fate",
+        "headings": ["Fates Undrawn"],
+        "content": ["Upon drawing a card from this deck of cards, the fate of the drawer is forever shifted. Only one drawn card may take effect per person. \n \n Crown: You have friends in high places. Some choice knowledge will come your way from the master of this realm \n Sun: The world revolves around you. The gods would like your attention. \n Moon: You are attuned to the world’s greatest mysteries. You will experience what others do not. \n Star: You are a beacon of hope, warmth, and radiance. Others will rally to your cause. \n Comet: You are a fleeting rarity. Your actions will not go unnoticed. \n The Fates: The master of this realm will consult with you \n Throne: You command an aura of importance. You deserve more. \n Key: The world is open to you. You will know the way. \n Knight: You have been chosen. Guard the Deck, and it will grant you a boon. \n Gem: You are valuable. You will be protected and cherished. \n Talons: The claws dig in. You are restricted, but you know not how. \n Void: You are nothing. You will be treated as such. \n Flames: Your world will burn around you. A devil delights in your suffering. \n Skull: Death would like to make a deal. \n Idiot: Nothing has changed. \n Dungeon: The world is a dangerous place. You may encounter traps wherever you go. \n Ruin: Your greatest achievements will lie in shambles. Your name will be forever besmirched. \n Euryale: Fear can be petrifying. In crucial moments, you will fail. \n Rogue: Trust is a dangerous thing. You will be betrayed. \n Balance: All must remain in alignment. Your actions will have equal and opposite reactions. \n Fool: You know not what you are. You are prone to delusion. \n Jester: The world laughs behind your back. You are difficult to take seriously."],
+        "imageURL": "",
+        "rarity": "Wondrous, Very Rare",
+        "weight": "—"
     }
 ]
