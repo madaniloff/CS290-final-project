@@ -1,7 +1,7 @@
 [
     {
         "type": "location",
-        "title": "The Axiomatic Core",
+        "title": "The Inner Machinations",
         "headings": ["The Axiomatic Hivemind.", "Planetary Change."],
         "content": ["The Axiomatic Hivemind exists deep within the crust of Omnaeus. It is a force of pure constants that binds the chaos of the planet together. In great underground chasms, massive continental-sized gears known as the Inner Machinations turn at a constant rate, tended to by the Axos Legion. The Axos Legion are an army of self-replicating clockworks who operate according to the Grand Design, a set of fundamental rules that was written during the birth of Omnaeus. The exact rulings of the Grand Design are unknown to any but the Axos Legion, but one can extrapolate based on their behavior. One thing is clear: the gears must always turn.",
         "As the gears turn, the northern and southern hemispheres of the planet twist around each other, as if the planet is split evenly from east to west. Anything that would connect the two halves of the planet that is not part of the Inner Machinations is quickly torn asunder as the planet rotates with unfathomable force around a rift known as the Fissure. The planet simultaneously rotates as a whole along an inconsistent, tilted axis that exposes different parts of the planet to various amounts of light from Omnaeus’s sun, which is known as the Sunspot. The Sunspot remains stationary. From Omnaeus, it appears to be a great bright ring in the sky, as its center is darker than the rest of it."],
@@ -11,6 +11,20 @@
         "location": "Core of Omnaeus",
         "size": "~800 million cubic miles",
         "population": "~2 million clockwork soldiers",
-        "date": "1st of Tilt - Present"
+        "date": "1st of Tilt, 0 - Present"
+    },
+    {
+        "type": "location",
+        "title": "Guinn",
+        "headings": ["Clockwork Servants.", "Pervasive Boredom."],
+        "content": ["The kingdom of Guinn was established around the Major Key, a massive clockwork key that rotates the Inner Machinations. The Axos Legion tends to those who live there, under strict orders to protect and tend to the needs of those with noble blood. In return, the nobles promise to protect the clockwork key from any who would harm it. However, due to the Axos Legion automating countless things, the rulers of Guinn are generally incompetent, but nobody cares because the clockworks handle everything.",
+        "Conflict in Guinn is a rarity, and the people will actively put themselves in danger, if only to experience something more thrilling than a life of endless luxury. Many nobles in Guinn have taken to practicing dark, forbidden arts, practicing rhetoric with fiends and sending them against their own armies. The clockworks are indifferent to their masters' actions, and the ensuing battles between devils and machines are viewed as a source of entertainment, with nobles often going to war with one another simply for bragging rights."],
+        "imageURL": "",
+        "alignment": "Lawful Neutral",
+        "leader": "Felix Devlin",
+        "location": "Northern Hemisphere, around the Major Key",
+        "size": "~3.5 million square miles",
+        "population": "~100 million, ~200 million clockwork soldiers",
+        "date": "12th of Tilt, 1245 - Present"
     }
 ]
