@@ -37,5 +37,15 @@
         "region": "Mountainous",
         "level": "2",
         "characters": "Trixan"
+    },
+    {
+        "type": "encounter",
+        "title": "Grorg's Bridge",
+        "headings": ["Interdimensional Ogre"],
+        "content": ["Grorg is a nice ogre who guards both sides of a bridge across the river at once, believing that he is protecting travelers from a cruel ogre who waits on the other side. \n A time anomaly prevents Grorg from ever crossing the bridge to meet his other self."],
+        "imageUrl": "",
+        "region": "River",
+        "level": 2,
+        "characters": "Grorg"
     }
 ]
