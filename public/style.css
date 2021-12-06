@@ -39,6 +39,8 @@ body {
     height: 40px;
 }
 
+/* content portion of the page*/
+
 .content {
     background-color: black;
     margin-top: 35px;
@@ -75,33 +77,79 @@ body {
     margin-right: 230px;
 }
 
-.asideClass {
-    background-color: red;
-    
-    width: 400px;
 
-}
 
 .section-Div-Container{
     margin-left: 40px;
     margin-top: 40px;
     
+    
 }
 
-#Title-Page{
+#Title-Page{ /*id for the title within the 'section' portion of main*/
     font-size: 40px;
 
 }
 
 
-#Table-Contents{
-    background-color: #cc00cc;
+#Table-Contents{ /*the class controls the table of contents portion*/
+    background-color: rgb(207, 226, 243);
+    color: black;
     margin-bottom: 30px;
     padding-top: 40px;
     height: 80px;
     width: 400px;
 }
-.section-elements{
+
+
+.section-elements{ /* this class is for each of the div/headers below the table of contents*/
     margin-bottom: 30px;
 
+}
+
+
+.asideClass { /*This class is simply for the entire aside section on the pages*/
+    width: 400px;
+    color: black;
+   
+}
+
+.aside-Top-Contain{ /* This class controls the both the image container and creature title in the aside sections*/
+    margin-top: 40px;
+    background-color: rgb(207, 226, 243);
+    width: 350px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.aside-Lower-Contain{ /* This class controls the outline of the larger div in the lower aside portion. Mostly used for the backround color.*/
+    margin-top: 40px;
+    background-color: rgb(207, 226, 243);
+    width: 350px;
+    margin-bottom: 40px;
+
+}
+
+.aside-Lower-elements{ /*This class is controls each of the divs, nested inside the 'aside-lower-contain' div. This is use to center the headers'. e.g 'info box'.*/
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.aside-Lower-elements p{ /*This is the class controls the the <div> with the <p> nested within it.*/
+    text-align: center;
+}
+
+.aside-Image-Container{ /*This class controls the <div> container for the image in the aside section.*/
+    margin-top: 20px;
+    
+
+}
+
+#aside-Image{
+    object-fit: contain;
+
+    height: 183px;
+    width: 273px;
 }
