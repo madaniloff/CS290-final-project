@@ -1,58 +1,64 @@
-
-body{
+body {
     color: white;
     margin: 0;
+    font-family: "Georgia";
 }
-#wholePageColor{
+#wholePageColor {
     background-color: rgba(38, 33, 55);
 }
 
-.ListNavitems{
+.ListNavitems {
     background-color: rgb(0, 0, 0);
     display: flex;
     display: row;
     height: 100px;
 }
 
-.ItemsNav{
+.ItemsNav {
     margin-top: 30px;
     margin-left: 30px;
-    
 }
 
-.ItemsNav label{ /* this is a class for the label element inside the nav bar*/
+.ItemsNav label { /* this is a class for the label element inside the nav bar*/
     font-size: 30px;
-    
+    text-shadow: 0px 0px 100px #cc00cc, 0px 0px 100px #cc00cc, 0px 0px 100px #cc00cc, 0px 0px 100px #cc00cc, 0px 0px 100px #cc00cc;
 }
 
-
-#LogoNavBar img{
-    margin-top: 5px;
-    margin-left: 50px;
-    margin-right: 50px;
+#Logo {
     height: 90px;
-    width: 90px;
 }
 
-.ItemsNav input{
+#Logo img {
+    height: 100%;
+    position: relative;
+    left: 50px;
+}
+
+.ItemsNav input {
     width: 200px;
     height: 40px;
-
 }
 
-.content{
-    background-color: rgb(0, 0, 0);
+.content {
+    background-color: black;
     margin-top: 35px;
     margin-left: 27px;
     width: 1430px;
 }
 
-.titleClass-container{
-    width: 650px;
-    position: relative;
+.titleClass-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     
+    background-color: black;
+    font-size: 75px;
+    text-shadow: -2px -2px 0px black, 2px -2px 0px black, -4px 0px 10px #cc00cc, 4px 0px 10px #cc00cc;
+    padding: 5px;
+    letter-spacing: 50px;
 }
 
-.site-title{
-    font-size: 40px;
+#site-title {
+    z-index: 1;
 }
