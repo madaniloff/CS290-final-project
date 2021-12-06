@@ -1,0 +1,16 @@
+[
+    {
+        "type": "location",
+        "title": "The Axiomatic Core",
+        "headings": ["The Axiomatic Hivemind.", "Planetary Change."],
+        "content": ["The Axiomatic Hivemind exists deep within the crust of Omnaeus. It is a force of pure constants that binds the chaos of the planet together. In great underground chasms, massive continental-sized gears known as the Inner Machinations turn at a constant rate, tended to by the Axos Legion. The Axos Legion are an army of self-replicating clockworks who operate according to the Grand Design, a set of fundamental rules that was written during the birth of Omnaeus. The exact rulings of the Grand Design are unknown to any but the Axos Legion, but one can extrapolate based on their behavior. One thing is clear: the gears must always turn.",
+        "As the gears turn, the northern and southern hemispheres of the planet twist around each other, as if the planet is split evenly from east to west. Anything that would connect the two halves of the planet that is not part of the Inner Machinations is quickly torn asunder as the planet rotates with unfathomable force around a rift known as the Fissure. The planet simultaneously rotates as a whole along an inconsistent, tilted axis that exposes different parts of the planet to various amounts of light from Omnaeus’s sun, which is known as the Sunspot. The Sunspot remains stationary. From Omnaeus, it appears to be a great bright ring in the sky, as its center is darker than the rest of it."],
+        "imageURL": "",
+        "alignment": "Lawful Neutral",
+        "leader": "The Eight Conductors",
+        "location": "Core of Omnaeus",
+        "size": "~800 million cubic miles",
+        "population": "~2 million clockwork soldiers",
+        "date": "1st of Tilt - Present"
+    }
+]
