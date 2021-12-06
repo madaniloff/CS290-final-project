@@ -44,6 +44,10 @@ body {
     margin-top: 35px;
     margin-left: 27px;
     width: 1430px;
+    /*my shit*/
+    display: flex
+    /**/
+
 }
 
 .titleClass-container {
@@ -61,4 +65,33 @@ body {
 
 #site-title {
     z-index: 1;
+}
+
+
+/*my shit*/
+.sectionClass{
+    
+    width: 600px;
+    margin-right: 230px;
+}
+
+.asideClass {
+    
+    width: 600px;
+
+}
+
+.section-Div-Container{
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+#Table-Contents{
+
+    margin-bottom: 30px;
+}
+
+.section-elements{
+    margin-bottom: 30px;
+
 }
