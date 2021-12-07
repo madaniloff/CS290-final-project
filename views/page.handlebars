@@ -1,17 +1,23 @@
 <div class = border>
     <div class = "title-content">
-        <h1>Omnaeus</h1>
+        <h1>{{pageData.title}}</h1>
     </div>
+
     <div class = "horizontal-box">
         <div id = "left-column">
-            <div class = "content">
-                <h2>Dreamt Into Existence.</h2>
-                <p>When the great beholder Cephanox was cast out into the astral sea by a group of upstart adventurers, he was left with naught to do but sleep. In his endless slumber, he dreamt the world of Omnaeus into existence; it is a place of endless stories, manifested dreams, and inescapable nightmares.</p>
-            </div>
+            {{#each pageData.content}}
+                <div class = "content">
+                    <h2>{{this.heading}}</h2>
+                    <p>{{this.paragraphs}}</p>
+                </div>
+            {{/each}}
         </div>
         <div id = "right-column">
             <div class = "content">
-                <img class = "post-image" src = "./images/Omnaeus-2.png">
+                <img class = "post-image" src = {{pageData.imageURL}}>
+                {{#if typelocation}}
+                    {{> location stats}}
+                {{/if}}
             </div>
         </div>
     </div>

@@ -1,11 +1,20 @@
 [
     {
+        "type": "location",
+        "title": "Omnaeus",
+        "content": [
+            {"heading":"Dreamt Into Existence.", "paragraphs":"When the great beholder Cephanox was cast out into the astral sea by a group of upstart adventurers, he was left with naught to do but sleep. In his endless slumber, he dreamt the world of Omnaeus into existence; it is a place of endless stories, manifested dreams, and inescapable nightmares."}
+        ],
+        "content2": {"alignment": "Chaotic Neutral", "leader": "Cephanox", "location": "The Astral Sea", "size": "~200 billion cubic miles", "population": "~6 billion", "date": "1st of Tilt, 0 - Present"},
+        "imageURL": "./images/Omnaeus-2.png"
+    },
+    {
         "type": "creature",
         "title": "Conductor",
         "headings": ["Axiomatic Force.", "Circuit of Life."],
         "content": ["A conductor is one of the highest ranking officers in the Axiomatic hierarchy, and there are only eight known conductors in existence. Conductors are vital to the functionality of the entire Axiomatic Hivemind, and their primary responsibility is to gather energy, which they transmit to the rest of the Hivemind via an electromagnetic field. A conductor always acts within the best interests of the Hivemind. It knows no morals or mercy, and it may gather this energy from any source that will produce it. Conductors typically seek out areas where immensely powerful beings dwell or where major events are taking place, where they then extract energy with frightening precision and efficiency.",
         "Life is one of the most efficient sources of energy, and conductors are exceptionally well-equipped to take it. Behemoths that would threaten entire cities may be felled by a single conductor, who acts with perfect planning and has an encyclopedic knowledge of seemingly every creature in Omnaeus. A report from Guinn that was written by members of the Axiomatic Hivemind stated that conductors are so ruthless in their extraction of energy that they may even remove all memory of a being's existence in the process. Scholars speculate that conductors may be the primary cause of death in celestial societies, though no one can know for certain if conductors are capable of such summary destruction because there are no recorded incidents of anything being erased from history."],
-        "imageURL": ".public/images/Conductor.png",
+        "imageURL": "./images/Conductor.png",
         "size": "Medium",
         "creature-type": "construct",
         "alignment": "lawful neutral",
@@ -45,7 +54,7 @@
         "headings": ["The Axiomatic Hivemind.", "Planetary Change."],
         "content": ["The Axiomatic Hivemind exists deep within the crust of Omnaeus. It is a force of pure constants that binds the chaos of the planet together. In great underground chasms, massive continental-sized gears known as the Inner Machinations turn at a constant rate, tended to by the Axos Legion. The Axos Legion are an army of self-replicating clockworks who operate according to the Grand Design, a set of fundamental rules that was written during the birth of Omnaeus. The exact rulings of the Grand Design are unknown to any but the Axos Legion, but one can extrapolate based on their behavior. One thing is clear: the gears must always turn.",
         "As the gears turn, the northern and southern hemispheres of the planet twist around each other, as if the planet is split evenly from east to west. Anything that would connect the two halves of the planet that is not part of the Inner Machinations is quickly torn asunder as the planet rotates with unfathomable force around a rift known as the Fissure. The planet simultaneously rotates as a whole along an inconsistent, tilted axis that exposes different parts of the planet to various amounts of light from Omnaeus’s sun, which is known as the Sunspot. The Sunspot remains stationary. From Omnaeus, it appears to be a great bright ring in the sky, as its center is darker than the rest of it."],
-        "imageURL": ".public/images/Inner-Machinations.jpg",
+        "imageURL": "./images/Inner-Machinations.jpg",
         "alignment": "Lawful Neutral",
         "leader": "The Eight Conductors",
         "location": "Core of Omnaeus",
@@ -59,7 +68,7 @@
         "headings": ["Clockwork Servants.", "Pervasive Boredom."],
         "content": ["The kingdom of Guinn was established around the Major Key, a massive clockwork key that rotates the Inner Machinations. The Axos Legion tends to those who live there, under strict orders to protect and tend to the needs of those with noble blood. In return, the nobles promise to protect the clockwork key from any who would harm it. However, due to the Axos Legion automating countless things, the rulers of Guinn are generally incompetent, but nobody cares because the clockworks handle everything.",
         "Conflict in Guinn is a rarity, and the people will actively put themselves in danger, if only to experience something more thrilling than a life of endless luxury. Many nobles in Guinn have taken to practicing dark, forbidden arts, practicing rhetoric with fiends and sending them against their own armies. The clockworks are indifferent to their masters' actions, and the ensuing battles between devils and machines are viewed as a source of entertainment, with nobles often going to war with one another simply for bragging rights."],
-        "imageURL": ".public/images/Guinn.jpg",
+        "imageURL": "./images/Guinn.jpg",
         "alignment": "Lawful Neutral",
         "leader": "Felix Devlin",
         "location": "Northern Hemisphere, around the Major Key",
@@ -73,7 +82,7 @@
         "headings": ["Tears of the Celestials.", "Irresistible Brilliance."],
         "content": ["An ore of purest brilliance, prismati is said to be the tears of the celestials themselves. When the celestial wars cracked the sky, they sent a shower of brilliance down upon Omnaeus. Prismati is the concentrated essence of all of the faith held by a particular celestial, released at once in a solid form as a celestial undergoes true death. It is unknown what use it may serve, but its very nature makes it irresistible to most.",
         "Upon seeing prismati, a creature must make a DC 12 Wisdom saving throw. On a success, a creature is immune to this effect for the next hour. On a failure, a creature feels compelled to acquire and possess the prismati for the next hour. A compelled creature will do what it can to acquire the prismati, but it will not do anything that it would never do otherwise, such as harming a loved one. /n /n This primati holds the essence of Trixan, a trickster celestial god who seeks to return to the Brainstorm."],
-        "imageURL": ".public/images/Prismati-Deposit.jpg",
+        "imageURL": "./images/Prismati-Deposit.jpg",
         "region": "Mountainous",
         "level": "2",
         "characters": "Trixan"
@@ -83,7 +92,7 @@
         "title": "Grorg's Bridge",
         "headings": ["Interdimensional Ogre"],
         "content": ["Grorg is a nice ogre who guards both sides of a bridge across the river at once, believing that he is protecting travelers from a cruel ogre who waits on the other side. \n A time anomaly prevents Grorg from ever crossing the bridge to meet his other self."],
-        "imageURL": "./public/images/Grorg.png",
+        "imageURL": "./images/Grorg.png",
         "region": "River",
         "level": "2",
         "characters": "Grorg"
@@ -93,7 +102,7 @@
         "title": "Deck of Fate",
         "headings": ["Effects"],
         "content": ["Upon drawing a card from this deck of cards, the fate of the drawer is forever shifted. Only one drawn card may take effect per person. \n \n Crown: You have friends in high places. Some choice knowledge will come your way from the master of this realm \n Sun: The world revolves around you. The gods would like your attention. \n Moon: You are attuned to the world’s greatest mysteries. You will experience what others do not. \n Star: You are a beacon of hope, warmth, and radiance. Others will rally to your cause. \n Comet: You are a fleeting rarity. Your actions will not go unnoticed. \n The Fates: The master of this realm will consult with you \n Throne: You command an aura of importance. You deserve more. \n Key: The world is open to you. You will know the way. \n Knight: You have been chosen. Guard the Deck, and it will grant you a boon. \n Gem: You are valuable. You will be protected and cherished. \n Talons: The claws dig in. You are restricted, but you know not how. \n Void: You are nothing. You will be treated as such. \n Flames: Your world will burn around you. A devil delights in your suffering. \n Skull: Death would like to make a deal. \n Idiot: Nothing has changed. \n Dungeon: The world is a dangerous place. You may encounter traps wherever you go. \n Ruin: Your greatest achievements will lie in shambles. Your name will be forever besmirched. \n Euryale: Fear can be petrifying. In crucial moments, you will fail. \n Rogue: Trust is a dangerous thing. You will be betrayed. \n Balance: All must remain in alignment. Your actions will have equal and opposite reactions. \n Fool: You know not what you are. You are prone to delusion. \n Jester: The world laughs behind your back. You are difficult to take seriously."],
-        "imageURL": "./public/images/Deck-of-Fate.jpg",
+        "imageURL": "./images/Deck-of-Fate.jpg",
         "rarity": "Wondrous, Very Rare",
         "item-type": "Trinket",
         "weight": "—"
@@ -103,7 +112,7 @@
         "title": "Soul Juicer",
         "headings": ["Properties", "Effects"],
         "content": ["Two-Handed, Heavy \n 2d6 Bludgeoning", "You have a +1 bonus to attack rolls made with this magic weapon. \n \n When you hit with a melee attack using this magic maul and reduce the target to 0 hit points, you gain 2d6 temporary hit points."],
-        "imageURL": "./public/images/Soul-Juicer.jpg",
+        "imageURL": "./images/Soul-Juicer.jpg",
         "rarity": "Uncommon",
         "item-type": "Maul",
         "weight": "10 lbs."
@@ -125,7 +134,7 @@
         "7th-level dreamcatcher feature \n \n You've mastered your ability to contend with a single, struggling opponent. When a creature that you have hooked with your astral fishing line is about to make an attack, you can use Cast Out as a reaction before the attack is made",
         "11th-level Dreamcatcher feature \n \n You have a technique for catching nearly any foe, which grants you the following benefits. \n \n <b>Catch of the Day.</b> You can now have the same creature hooked multiple times. Whenever a creature would be freed from being hooked, it is instead freed from only one hook. Whenever you target a creature with Reel In or Cast Out, you can repeat the same effect on the same creature for each additional hook that it is hooked by. \n \n <b>No Escape.</b> Your ranged weapon attacks weave in and out of the Astral Plane as they are made, allowing for them to pass through solid materials. Your ranged weapon attacks ignore all benefits provided by total cover or less. \n \n When you use Reel In or Cast Out, you can pull or launch the target directly through solid materials. If this ability causes a creature to occupy the same space as a solid object, the creature moves to the closest available space. \n \n <b>Plenty of Fish.</b> You can now have an unlimited number of creatures hooked at the same time. Whenever you use Reel In or Cast Out, you can target up to all of the creatures that you have hooked at once.",
         "15th-level dreamcatcher feature \n \n You can trap enemies in an astral net. As an action, you can deploy a number of tethers up to your Wisdom modifier (minimum of three tethers), placing each of them in different spaces within 20 feet of you. These tethers last until this feature can be used again, at which point they dissipate. \n \n As a bonus action, you can move a tether that is within 20 feet of you to another space within 20 feet of you. \n \n All of the tethers are connected to each other by ethereal walls of magical energy that are 5 feet high and 1 foot thick. Whenever a creature of your choice starts its turn while surrounded by these walls on at least three sides, it must make a Charisma saving throw against your spell save DC. On a failure, it is restrained until the start of its next turn. \n \n Once you use this feature, you can't use it again until you finish a short rest."],
-        "imageURL": "./public/images/Dreamcatcher.jpg",
+        "imageURL": "./images/Dreamcatcher.jpg",
         "class-type": "Ranger Subclass"
     }
 ]
