@@ -1,30 +1,38 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
     <head>
-        <title>Omnaues Wiki</title>
+        <meta charset="utf-8">
+        <title>Omnaeus Wiki</title>
 
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Outfit">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
     </head>
 
-    <body id = 'wholePageColor'>
+    <body>
+        <div id = "header-bar">
+            <div class = "title-container">
+                <div id = "logo"> <img src = "./images/Omnaeus.png" alt= "Omnaeus"></div>
+                <header id = "site-title"> OMNAEUS </header>
+            </div>
+        </div>
+        
+        <div id = "navbar">
+            <div id = "navbar-left">
+                <a href = "./Home" target="_blank">Home</a>
+                <a href = "./Creatures" target="_blank">Creatures</a>
+                <a href = "./Locations" target="_blank">Locations</a>
+                <a href = "./Encounters" target="_blank">Encounters</a>
+                <a href = "./Items" target="_blank">Items</a>
+                <a href = "./Classes" target="_blank">Classes</a>
+                <a href = "http://cephanox.bandcamp.com/" target="_blank">Music</a>
+            </div>
+            <div id = "navbar-right">
+                <input type="text" placeholder="Search..">
+            </div>
+        </div>
 
-        <nav class = "ListNavitems">
-
-            <div id = "LogoNavBar"> <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWaeXj98lKyT2zoBWvV5jzqrih96BbsnFunw&usqp=CAU" alt= "randome cat"></div>
-            <div class = "ItemsNav"><label>Home </label></div>
-            <div class = "ItemsNav"><label>Locations</label></div>
-            <div class = "ItemsNav"><label>Encounters</label></div>
-            <div class = "ItemsNav"><label>Items </label></div>
-            <div class = "ItemsNav"><label>Characters</label></div>
-            <div class = "ItemsNav"><label>Creatures</label></div>
-            <div class = "ItemsNav"><label>Classes</label></div>
-            <div class = "ItemsNav"><label>Music</label></div>
-            <div class = "ItemsNav" ><input type="text" placeholder="Search.."></div>
-    
-        </nav>
-
-          {{{body}}}             
-
-
+        {{{body}}}
     </body>
 </html>
