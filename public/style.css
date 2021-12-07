@@ -19,9 +19,15 @@ body {
     margin-left: 30px;
 }
 
-.ItemsNav label { /* this is a class for the label element inside the nav bar*/
+.ItemsNav a { /* this is a class for the label element inside the nav bar*/
+    text-decoration: none;
+    color: white;
     font-size: 30px;
     text-shadow: 0px 0px 100px #cc00cc, 0px 0px 100px #cc00cc, 0px 0px 100px #cc00cc, 0px 0px 100px #cc00cc, 0px 0px 100px #cc00cc;
+}
+.ItemsNav a:hover{
+    text-decoration: underline;
+
 }
 
 #Logo {
@@ -47,7 +53,9 @@ body {
     margin-left: 27px;
     width: 1430px;
     /*my shit*/
-    display: flex
+    display: flex;
+    
+
     /**/
 
 }
@@ -88,7 +96,6 @@ body {
 
 #Title-Page{ /*id for the title within the 'section' portion of main*/
     font-size: 40px;
-
 }
 
 
@@ -99,6 +106,7 @@ body {
     padding-top: 40px;
     height: 80px;
     width: 400px;
+    text-align: center;
 }
 
 
@@ -111,6 +119,7 @@ body {
 .asideClass { /*This class is simply for the entire aside section on the pages*/
     width: 400px;
     color: black;
+    
    
 }
 
@@ -143,8 +152,6 @@ body {
 
 .aside-Image-Container{ /*This class controls the <div> container for the image in the aside section.*/
     margin-top: 20px;
-    
-
 }
 
 #aside-Image{
@@ -152,4 +159,27 @@ body {
 
     height: 183px;
     width: 273px;
+}
+
+#add-suggestion{
+    background-color: rgb(100, 86, 146);
+    color:rgb(207, 226, 243);
+    width: 80px;
+    height: 80px;
+    font-size: 50px;
+    text-align: center;
+    border-radius: 50%;
+    position: fixed;
+    right: 10px;
+    bottom: 15px;
+    border:none;
+    box-shadow: -5px 5px 10px rgb(37, 37, 37);
+
+}
+
+#add-suggestion:hover{
+    background-color: rgb(207, 226, 243);
+    color:rgb(100, 86, 146);
+    transform: scale(1.1);
+   cursor:pointer;
 }
