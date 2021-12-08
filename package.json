@@ -9,7 +9,8 @@
     "handlebars": "^4.7.7"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/osu-cs290-f21/final-project-team-6/issues"
   },
-  "homepage": "https://github.com/osu-cs290-f21/final-project-team-6#readme"
+  "homepage": "https://github.com/osu-cs290-f21/final-project-team-6#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }

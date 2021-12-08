@@ -35,25 +35,25 @@ app.get("/home", function (req, res) {
 })
 
 //Locations
-app.get("/locations", function (req, res, next) {
+app.get("/location", function (req, res, next) {
     var locationsArray = []
     for (var i = 0; i < pageData.length; i++) {
         if (pageData[i].type === 'location') {
             locationsArray.push(pageData[i])
         }
     }
-    pageType = 'Locations'
+    pageType = 'location'
     res.status(200).render('list', {
         listArray: locationsArray,
         type: pageType
     })
 })
 //Locations specific
-app.get("/locations/:post", function (req, res, next) {
+app.get("/location/:post", function (req, res, next) {
     var post = req.params.post.toLowerCase();
-    pageType = 'locations';
+    pageType = 'location';
     pageData.forEach(function(element){
-        if(element.title === post && element.type === 'locations'){
+        if(element.title === post && element.type === 'location'){
             exists = 1;
         }
     });
@@ -75,14 +75,14 @@ app.get("/locations/:post", function (req, res, next) {
 })
 
 //Encounters
-app.get("/encounters", function(req, res, next) {
+app.get("/encounter", function(req, res, next) {
     var encountersArray = []
     for (var i = 0; i < pageData.length; i++) {
-        if (pageData[i].type === 'encounters') {
+        if (pageData[i].type === 'encounter') {
             encountersArray.push(pageData[i])
         }
     }
-    pageType = 'Encounters';
+    pageType = 'encounter';
     res.status(200).render('list', {
         listArray: encountersArray,
         type: pageType
@@ -90,11 +90,11 @@ app.get("/encounters", function(req, res, next) {
 })
 
 //Encounters specific
-app.get("/encounters/:post", function (req, res, next) {
+app.get("/encounter/:post", function (req, res, next) {
     var post = req.params.post.toLowerCase();
     pageType = 'encounters';
     pageData.forEach(function(element){
-        if(element.title === post && element.type === 'encounters'){
+        if(element.title === post && element.type === 'encounter'){
             exists = 1;
         }
     });
@@ -114,14 +114,14 @@ app.get("/encounters/:post", function (req, res, next) {
 })
 
 //Items
-app.get("/items", function (req, res, next) {
+app.get("/item", function (req, res, next) {
     var itemsArray = []
     for (var i = 0; i < pageData.length; i++) {
         if (pageData[i].type === 'item') {
             itemsArray.push(pageData[i])
         }
     }
-    pageType = 'Items';
+    pageType = 'item';
     res.status(200).render('list', {
         listArray: itemsArray,
         type: pageType
@@ -133,7 +133,7 @@ app.get("/items/:post", function (req, res, next) {
     var post = req.params.post.toLowerCase();
     pageType = 'items';
     pageData.forEach(function(element){
-        if(element.title === post && element.type === 'items'){
+        if(element.title === post && element.type === 'item'){
             exists = 1;
         }
     });
@@ -153,14 +153,14 @@ app.get("/items/:post", function (req, res, next) {
 })
 
 //Creatures
-app.get("/creatures", function (req, res, next) {
+app.get("/creature", function (req, res, next) {
     var creaturesArray = []
     for (var i = 0; i < pageData.length; i++) {
         if (pageData[i].type === 'creature') {
             creaturesArray.push(pageData[i])
         }
     }
-    pageType = 'Creatures'
+    pageType = 'creature'
     res.status(200).render('list', {
         listArray: creaturesArray,
         type: pageType
@@ -168,11 +168,11 @@ app.get("/creatures", function (req, res, next) {
 })
 
 //Creatures specific
-app.get("/creatures/:post", function (req, res, next) {
+app.get("/creature/:post", function (req, res, next) {
     var post = req.params.post.toLowerCase();
     pageType = 'creatures';
     pageData.forEach(function(element){
-        if(element.title === post && element.type === 'creatures'){
+        if(element.title === post && element.type === 'creature'){
             exists = 1;
         }
     });
@@ -192,14 +192,14 @@ app.get("/creatures/:post", function (req, res, next) {
 })
 
 //Classes
-app.get("/classes", function (req, res, next) {
+app.get("/class", function (req, res, next) {
     var classArray = []
     for (var i = 0; i < pageData.length; i++) {
         if (pageData[i].type === 'class') {
             classArray.push(pageData[i])
         }
     }
-    pageType = 'Classes';
+    pageType = 'class';
     res.status(200).render('list', {
         listArray: classArray,
         type: pageType
@@ -209,9 +209,9 @@ app.get("/classes", function (req, res, next) {
 //Classes specific
 app.get("/classes/:post", function (req, res, next) {
     var post = req.params.post.toLowerCase();
-    pageType = 'classes';
+    pageType = 'class';
     pageData.forEach(function(element){
-        if(element.title === post && element.type === 'classes'){
+        if(element.title === post && element.type === 'class'){
             exists = 1;
         }
     });

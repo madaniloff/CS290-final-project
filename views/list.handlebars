@@ -12,12 +12,10 @@
 
                 <section class = "contentLinks">
 
-            {{#if allPosts}}
                  {{#each listArray}}
-                     {{> listTemplate description = this.description link = this.link}
+                     {{> linkTemplate description = this.title type = this.type link = this.link}}
                  {{/each}}
-            {{/if}}
-
+          
 
                 </section>
                 
