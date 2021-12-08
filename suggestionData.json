@@ -1,0 +1,11 @@
+// Suggestion Format
+
+// [
+//     {
+//         "suggestion": "Content of suggestion"
+//     },
+    
+//     {
+//         "suggestion": "Content of a different suggestion"
+//     }
+// ]
