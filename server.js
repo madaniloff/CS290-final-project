@@ -13,6 +13,7 @@ app.engine('handlebars', exphbs.engine({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
 // link public folder
+//app.use('/public', express.static('public'));
 app.use(express.static('public'));
 
 //Content Page
@@ -24,6 +25,29 @@ app.get("/", function (req, res) {
     });
 })
 
+//Home
+app.get("/home", function (req, res) {
+    res.status(200).render('page', {
+        pageData: pageData[0],
+        stats: pageData[0].content2,
+        typelocation: true
+    });
+})
+
+//Locations
+app.get("/locations", function (req, res, next) {
+    var locationsArray = []
+    for (var i = 0; i < pageData.length; i++) {
+        if (pageData[i].type === 'location') {
+            locationsArray.push(pageData[i])
+        }
+    }
+    pageType = 'Locations'
+    res.status(200).render('list', {
+        listArray: locationsArray,
+        type: pageType
+    })
+})
 //Locations specific
 app.get("/locations/:post", function (req, res, next) {
     var post = req.params.post.toLowerCase();
@@ -35,7 +59,7 @@ app.get("/locations/:post", function (req, res, next) {
     });
 
     if(exists === 1){
-         res.status(200).render('contentPage', {
+         res.status(200).render('page', {
             pageData, 
             post,
             pageType
@@ -52,12 +76,17 @@ app.get("/locations/:post", function (req, res, next) {
 
 //Encounters
 app.get("/encounters", function(req, res, next) {
-    pageType = 'encounters';
-    res.status(200).render('contentPage', {
-        pageData,
-        pageType
+    var encountersArray = []
+    for (var i = 0; i < pageData.length; i++) {
+        if (pageData[i].type === 'encounters') {
+            encountersArray.push(pageData[i])
+        }
+    }
+    pageType = 'Encounters';
+    res.status(200).render('list', {
+        listArray: encountersArray,
+        type: pageType
     });
-    next();
 })
 
 //Encounters specific
@@ -70,7 +99,7 @@ app.get("/encounters/:post", function (req, res, next) {
         }
     });
     if(exists === 1 ){
-        res.status(200).render('contentPage', {
+        res.status(200).render('page', {
             pageData, 
             post,
             pageType
@@ -86,12 +115,17 @@ app.get("/encounters/:post", function (req, res, next) {
 
 //Items
 app.get("/items", function (req, res, next) {
-    pageType = 'items';
-    res.status(200).render('contentPage', {
-        pageData,
-        pageType
+    var itemsArray = []
+    for (var i = 0; i < pageData.length; i++) {
+        if (pageData[i].type === 'item') {
+            itemsArray.push(pageData[i])
+        }
+    }
+    pageType = 'Items';
+    res.status(200).render('list', {
+        listArray: itemsArray,
+        type: pageType
     });
-    next();
 })
 
 //items specific
@@ -104,41 +138,7 @@ app.get("/items/:post", function (req, res, next) {
         }
     });
     if(exists === 1){
-        res.status(200).render('contentPage', {
-            pageData, 
-            post,
-            pageType
-        });
-    }
-    else{
-        res.status(404).render('404', {
-            path: req.url
-        });
-    }
-    next();
-})
-
-//Characters
-app.get("/characters", function (req, res, next) {
-    pageType = 'characters';
-    res.status(200).render('contentPage', {
-        pageData,
-        pageType
-    });
-    next();
-})
-
-//characters specific
-app.get("/characters/:post", function (req, res, next) {
-    var post = req.params.post.toLowerCase();
-    pageType = 'characters';
-    pageData.forEach(function(element){
-        if(element.title === post && element.type === 'characters'){
-            exists = 1;
-        }
-    });
-    if(exists === 1){
-        res.status(200).render('contentPage', {
+        res.status(200).render('page', {
             pageData, 
             post,
             pageType
@@ -154,15 +154,20 @@ app.get("/characters/:post", function (req, res, next) {
 
 //Creatures
 app.get("/creatures", function (req, res, next) {
-    pageType = 'creatures';
-    res.status(200).render('contentPage', {
-        pageData,
-        pageType
-    });
-    next();
+    var creaturesArray = []
+    for (var i = 0; i < pageData.length; i++) {
+        if (pageData[i].type === 'creature') {
+            creaturesArray.push(pageData[i])
+        }
+    }
+    pageType = 'Creatures'
+    res.status(200).render('list', {
+        listArray: creaturesArray,
+        type: pageType
+    }); 
 })
 
-//creatures specific
+//Creatures specific
 app.get("/creatures/:post", function (req, res, next) {
     var post = req.params.post.toLowerCase();
     pageType = 'creatures';
@@ -188,12 +193,17 @@ app.get("/creatures/:post", function (req, res, next) {
 
 //Classes
 app.get("/classes", function (req, res, next) {
-    pageType = 'classes';
-    res.status(200).render('contentPage', {
-        pageData,
-        pageType
+    var classArray = []
+    for (var i = 0; i < pageData.length; i++) {
+        if (pageData[i].type === 'class') {
+            classArray.push(pageData[i])
+        }
+    }
+    pageType = 'Classes';
+    res.status(200).render('list', {
+        listArray: classArray,
+        type: pageType
     });
-    next();
 })
 
 //Classes specific
@@ -222,12 +232,7 @@ app.get("/classes/:post", function (req, res, next) {
 
 //Music
 app.get("/music", function (req, res, next) {
-    pageType = 'music';
-    res.status(200).render('contentPage', {
-        pageData,
-        pageType
-    });
-    next();
+    res.status(200).redirect('https://cephanox.bandcamp.com/')
 })
 
 // listen on port 
@@ -237,6 +242,19 @@ app.listen(port, function(err) {
     }
     console.log("Listenning on port", port);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
