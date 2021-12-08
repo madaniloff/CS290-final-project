@@ -92,25 +92,26 @@ app.get("/encounter", function(req, res, next) {
 //Encounters specific
 app.get("/encounter/:post", function (req, res, next) {
     var exists
-    var post = req.params.post.toLowerCase();
-    pageType = 'encounters';
-    pageData.forEach(function(element){
-        if(element.title === post && element.type === 'encounter'){
-            exists = 1;
+    var post = req.params.post
+    pageType = 'encounter';
+    //Check to make sure link exists
+    for (var i = 0; i < pageData.length; i++) {
+        if (pageData[i].link === post && pageData[i].type === 'encounter') {
+            exists = true
+            var index = i
         }
-    });
-    if(exists === 1 ){
-        res.status(200).render('page', {
-            pageData, 
-            post,
-            pageType
+    }
+    if (exists === true) {
+         res.status(200).render('page', {
+            pageData: pageData[index],
+            stats: pageData[index].content2,
         });
     }
-    else{
+    else {
         res.status(404).render('404', {
             path: req.url
-        }); 
-    }
+        });
+    }    
 })
 
 //Items
@@ -129,20 +130,21 @@ app.get("/item", function (req, res, next) {
 })
 
 //Items specific
-app.get("/items/:post", function (req, res, next) {
+app.get("/item/:post", function (req, res, next) {
     var exists
-    var post = req.params.post.toLowerCase();
-    pageType = 'items';
-    pageData.forEach(function(element){
-        if(element.title === post && element.type === 'item'){
-            exists = 1;
+    var post = req.params.post
+    pageType = 'item';
+    //Check to make sure link exists
+    for (var i = 0; i < pageData.length; i++) {
+        if (pageData[i].link === post && pageData[i].type === 'item') {
+            exists = true
+            var index = i
         }
-    });
-    if(exists === 1){
-        res.status(200).render('page', {
-            pageData, 
-            post,
-            pageType
+    }
+    if (exists === true) {
+         res.status(200).render('page', {
+            pageData: pageData[index],
+            stats: pageData[index].content2,
         });
     }
     else {
@@ -170,21 +172,22 @@ app.get("/creature", function (req, res, next) {
 //Creatures specific
 app.get("/creature/:post", function (req, res, next) {
     var exists
-    var post = req.params.post.toLowerCase();
-    pageType = 'creatures';
-    pageData.forEach(function(element){
-        if(element.title === post && element.type === 'creature'){
-            exists = 1;
+    var post = req.params.post
+    pageType = 'creature';
+    //Check to make sure link exists
+    for (var i = 0; i < pageData.length; i++) {
+        if (pageData[i].link === post && pageData[i].type === 'creature') {
+            exists = true
+            var index = i
         }
-    });
-    if(exists === 1){
-        res.status(200).render('contentPage', {
-            pageData, 
-            post,
-            pageType
+    }
+    if (exists === true) {
+         res.status(200).render('page', {
+            pageData: pageData[index],
+            stats: pageData[index].content2,
         });
     }
-    else{
+    else {
         res.status(404).render('404', {
             path: req.url
         });
@@ -207,23 +210,24 @@ app.get("/class", function (req, res, next) {
 })
 
 //Classes specific
-app.get("/classes/:post", function (req, res, next) {
+app.get("/class/:post", function (req, res, next) {
     var exists
-    var post = req.params.post.toLowerCase();
+    var post = req.params.post
     pageType = 'class';
-    pageData.forEach(function(element){
-        if(element.title === post && element.type === 'class'){
-            exists = 1;
+    //Check to make sure link exists
+    for (var i = 0; i < pageData.length; i++) {
+        if (pageData[i].link === post && pageData[i].type === 'class') {
+            exists = true
+            var index = i
         }
-    });
-    if(exists === 1){
-        res.status(200).render('page', {
-            pageData, 
-            post,
-            pageType
+    }
+    if (exists === true) {
+         res.status(200).render('page', {
+            pageData: pageData[index],
+            stats: pageData[index].content2,
         });
     }
-    else{
+    else {
         res.status(404).render('404', {
             path: req.url
         });
