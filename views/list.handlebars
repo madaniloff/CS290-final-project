@@ -22,10 +22,38 @@
                 <section class = "suggestionLinks">
                     <h1 class = "suggestionHeader">
                         Suggestions
-                    <h/1>
+                    </h1>
                 </section>
 
         </main>
+
+        <button type = "button" id = "add-suggestion"><i class="far fa-comment-dots"></i></button>
+
+        <div id = "backdrop" class = "hide"></div>
+
+
+        <div id = "suggestion-box" class="hide">
+            <div class = "layout-suggest-box">
+                <div class = "suggestion-box-header"> 
+                    <h1>Add a Suggestion</h1>
+                    <button type="button" id = "exit-button"><i class="fas fa-times-circle"></i></button>
+
+                </div>
+
+
+                <div class= "text-container">
+                    <textarea class = "text-area-class" placeholder= "Enter Text Here..."></textarea>
+                </div>
+
+                <div class = "footer-box">
+                    <button type = "button" id = "cancal-post">Cancel</button>
+                    <button type="button" id = "submit-post">Submit</button>
+                
+                </div>
+
+            </div>
+
+        </div>
 
 
     </body>
