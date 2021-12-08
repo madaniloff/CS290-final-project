@@ -44,7 +44,7 @@ function closeSuggestionModal(){
     backdrop2.classList.add('hide')
 
 }
-
+// ADD A POST 
 function postSuggestion(){
     var textBox = document.getElementById('text-area-class').value.trim()
     console.log(textBox)
@@ -53,12 +53,37 @@ function postSuggestion(){
         alert("Please enter text!!!!!")
     }
     else{
-        postHolder = textBox
-        console.log(postHolder)
-        clearTextBox()
-        closeSuggestionModal()
+
+        var req = new XMLHttpRequest();
+        var url = '/suggestion/add';
+        req.open('POST', url);
+
+        var suggestionObj = {
+            suggestion: textBox
+        }
+
+        var reqBody = JSON.stringify(suggestionObj)
+
+        console.log(reqBody)
+
+        req.addEventListener('load', function(event){
+            if(event.target.status === 200){
+                var suggestionTemplate = Handlebars.templates.suggestion
+                var newSuggestionHTML = suggestionTemplate(suggestionObj)
+                var suggestionContainer = document.querySelector('suggestionContent')
+                suggestionContainer.insertAdjacentHTML('beforeend', newSuggestionHTML)
+            }
+            else{
+                alert("Error posting suggestion.")
+            }
+        })
+
+        req.setRequestHeader('Content-Type', 'application/json')
+        req.send(reqBody)
     }
 
+    clearTextBox()
+    closeSuggestionModal()
 }
 
 window.addEventListener('DOMContentLoaded', function(){
@@ -66,7 +91,7 @@ window.addEventListener('DOMContentLoaded', function(){
     var suggestionButton = document.getElementById('add-suggestion')
     
     if(suggestionButton){
-        console.log('clickyed')
+        console.log('clicked')
         suggestionButton.addEventListener('click', openSuggestionModal)
 
     }
