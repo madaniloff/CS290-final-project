@@ -1,8 +1,7 @@
 var express = require('express');
 var exphbs = require('express-handlebars');
 var pageData = require('./postData.json'); // DOM FILE
-
-// NEED TO INCLUDE DOM FILES
+const path = require('path');
 
 // default port 7000
 var port = process.env.PORT || 7000;
@@ -13,8 +12,9 @@ app.engine('handlebars', exphbs.engine({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
 // link public folder
-//app.use('/public', express.static('public'));
-app.use(express.static('public'));
+//app.use(express.static(__dirname + '/public/'));
+app.use('/', express.static(path.join(__dirname, '/public')));
+//app.use(express.static(path.join(__dirname,'public')))
 
 //Content Page
 app.get("/", function (req, res) {
@@ -50,28 +50,28 @@ app.get("/location", function (req, res, next) {
 })
 //Locations specific
 app.get("/location/:post", function (req, res, next) {
-    var post = req.params.post.toLowerCase();
+    var exists
+    var post = req.params.post
     pageType = 'location';
-    pageData.forEach(function(element){
-        if(element.title === post && element.type === 'location'){
-            exists = 1;
+    //Check to make sure link exists
+    for (var i = 0; i < pageData.length; i++) {
+        if (pageData[i].link === post && pageData[i].type === 'location') {
+            exists = true
+            var index = i
         }
-    });
-
-    if(exists === 1){
+    }
+    if (exists === true) {
          res.status(200).render('page', {
-            pageData, 
-            post,
-            pageType
+            pageData: pageData[index],
+            stats: pageData[index].content2,
+            typelocation: true
         });
     }
-    else{
+    else {
         res.status(404).render('404', {
             path: req.url
         });
     }
-
-    next();
 })
 
 //Encounters
@@ -91,6 +91,7 @@ app.get("/encounter", function(req, res, next) {
 
 //Encounters specific
 app.get("/encounter/:post", function (req, res, next) {
+    var exists
     var post = req.params.post.toLowerCase();
     pageType = 'encounters';
     pageData.forEach(function(element){
@@ -110,7 +111,6 @@ app.get("/encounter/:post", function (req, res, next) {
             path: req.url
         }); 
     }
-    next();
 })
 
 //Items
@@ -128,8 +128,9 @@ app.get("/item", function (req, res, next) {
     });
 })
 
-//items specific
+//Items specific
 app.get("/items/:post", function (req, res, next) {
+    var exists
     var post = req.params.post.toLowerCase();
     pageType = 'items';
     pageData.forEach(function(element){
@@ -144,12 +145,11 @@ app.get("/items/:post", function (req, res, next) {
             pageType
         });
     }
-    else{
+    else {
         res.status(404).render('404', {
             path: req.url
         });
     }
-    next();
 })
 
 //Creatures
@@ -169,6 +169,7 @@ app.get("/creature", function (req, res, next) {
 
 //Creatures specific
 app.get("/creature/:post", function (req, res, next) {
+    var exists
     var post = req.params.post.toLowerCase();
     pageType = 'creatures';
     pageData.forEach(function(element){
@@ -188,7 +189,6 @@ app.get("/creature/:post", function (req, res, next) {
             path: req.url
         });
     }
-    next();
 })
 
 //Classes
@@ -208,6 +208,7 @@ app.get("/class", function (req, res, next) {
 
 //Classes specific
 app.get("/classes/:post", function (req, res, next) {
+    var exists
     var post = req.params.post.toLowerCase();
     pageType = 'class';
     pageData.forEach(function(element){
@@ -216,7 +217,7 @@ app.get("/classes/:post", function (req, res, next) {
         }
     });
     if(exists === 1){
-        res.status(200).render('contentPage', {
+        res.status(200).render('page', {
             pageData, 
             post,
             pageType
@@ -227,7 +228,6 @@ app.get("/classes/:post", function (req, res, next) {
             path: req.url
         });
     }
-    next();
 })
 
 //Music
@@ -240,7 +240,7 @@ app.listen(port, function(err) {
     if(err) {
         throw err;
     }
-    console.log("Listenning on port", port);
+    console.log("Listening on port", port);
 });
 
 
