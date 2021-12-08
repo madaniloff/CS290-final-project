@@ -14,7 +14,7 @@
             "population": "~6 billion",
             "era": "1st of Tilt, 0 - Present"
         },
-        "imageURL": "./images/Omnaeus-2.png"
+        "imageURL": "/images/Omnaeus-2.png"
     },
     {
         "type": "creature",
@@ -62,7 +62,7 @@
                 {"name": "Firewall \n (Recharge 5-6)", "effect": "As a reaction, the conductor adds its proficiency bonus to its AC for a turn."},
                 {"name": "Phase \n (Recharge 5-6)", "effect": "As a free reaction, the conductor teleports up to 80 feet in any direction."}
             ]},
-        "imageURL": "./images/Conductor.png"
+        "imageURL": "/images/Conductor.png"
     },
     {
         "type": "location",
@@ -98,7 +98,7 @@
             "population": "~100 million humans, ~200 million clockwork soldiers",
             "date": "12th of Tilt, 1245 - Present"           
         },
-        "imageURL": "./images/Guinn.jpg"
+        "imageURL": "/images/Guinn.jpg"
     },
     {
         "type": "encounter",
@@ -113,12 +113,12 @@
             "level": "2",
             "characters": "Trixan"
         },
-        "imageURL": "./images/Prismati-Deposit.jpg"
+        "imageURL": "/images/Prismati-Deposit.jpg"
     },
     {
         "type": "encounter",
         "title": "Grorg's Bridge",
-        "link": "grorg%27s-bridge",
+        "link": "grorgs-bridge",
         "content": [
             {"heading": "Interdimensional Ogre", "paragraphs": "Grorg is a nice ogre who guards both sides of a bridge across the river at once, believing that he is protecting travelers from a cruel ogre who waits on the other side. \n A time anomaly prevents Grorg from ever crossing the bridge to meet his other self."}
         ],
@@ -127,7 +127,7 @@
             "level": "2",
             "characters": "Grorg"
         },
-        "imageURL": "./images/Grorg.png"
+        "imageURL": "/images/Grorg.png"
     },
     {
         "type": "item",
@@ -141,7 +141,7 @@
             "item-type": "Trinket",
             "weight": "—"
         },
-        "imageURL": "./images/Deck-of-Fate.jpg"
+        "imageURL": "/images/Deck-of-Fate.jpg"
     },
     {
         "type": "item",
@@ -156,7 +156,7 @@
             "item-type": "Maul",
             "weight": "10 lbs."
         },
-        "imageURL": "./images/Soul-Juicer.jpg"
+        "imageURL": "/images/Soul-Juicer.jpg"
     },
     {
         "type": "class",
@@ -182,7 +182,7 @@
             {"heading": "Ascendant Angler", "paragraphs": "11th-level Dreamcatcher feature \n \n You have a technique for catching nearly any foe, which grants you the following benefits. \n \n <b>Catch of the Day.</b> You can now have the same creature hooked multiple times. Whenever a creature would be freed from being hooked, it is instead freed from only one hook. Whenever you target a creature with Reel In or Cast Out, you can repeat the same effect on the same creature for each additional hook that it is hooked by. \n \n <b>No Escape.</b> Your ranged weapon attacks weave in and out of the Astral Plane as they are made, allowing for them to pass through solid materials. Your ranged weapon attacks ignore all benefits provided by total cover or less. \n \n When you use Reel In or Cast Out, you can pull or launch the target directly through solid materials. If this ability causes a creature to occupy the same space as a solid object, the creature moves to the closest available space. \n \n <b>Plenty of Fish.</b> You can now have an unlimited number of creatures hooked at the same time. Whenever you use Reel In or Cast Out, you can target up to all of the creatures that you have hooked at once."},
             {"heading": "Binding Constellation", "paragraphs": "15th-level dreamcatcher feature \n \n You can trap enemies in an astral net. As an action, you can deploy a number of tethers up to your Wisdom modifier (minimum of three tethers), placing each of them in different spaces within 20 feet of you. These tethers last until this feature can be used again, at which point they dissipate. \n \n As a bonus action, you can move a tether that is within 20 feet of you to another space within 20 feet of you. \n \n All of the tethers are connected to each other by ethereal walls of magical energy that are 5 feet high and 1 foot thick. Whenever a creature of your choice starts its turn while surrounded by these walls on at least three sides, it must make a Charisma saving throw against your spell save DC. On a failure, it is restrained until the start of its next turn. \n \n Once you use this feature, you can't use it again until you finish a short rest."}
         ],
-        "imageURL": "./images/Dreamcatcher.jpg",
+        "imageURL": "/images/Dreamcatcher.jpg",
         "class-type": "Ranger Subclass"
     }
 ]
