@@ -15,9 +15,26 @@
         <div id = "right-column">
             <div class = "content">
                 <img class = "post-image" src = {{pageData.imageURL}}>
-                {{#if typelocation}}
+                {{#if typeLocation}}
                     {{> location stats}}
                 {{/if}}
+
+                {{#if typeEncounter}}
+                    {{> encounters stats}}
+                {{/if}}
+
+                {{#if typeItem}}
+                    {{>items stats}}
+                {{/if}}
+
+                {{#if typeCreature}}
+                    {{>creatures stats}}
+                {{/if}}
+
+                {{#if typeClass}}
+                    {{>class stats}}
+                {{/if}}
+
             </div>
         </div>
     </div>

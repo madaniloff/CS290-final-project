@@ -1,27 +1,25 @@
 var express = require('express');
 var exphbs = require('express-handlebars');
-var pageData = require('./postData.json'); // DOM FILE
+var pageData = require('./postData.json'); 
 const path = require('path');
 
-// default port 7000
+//Default port 7000
 var port = process.env.PORT || 7000;
 var app = express();
 
-// establish handlebars dependencies
+//Establish handlebars dependencies
 app.engine('handlebars', exphbs.engine({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
-// link public folder
-//app.use(express.static(__dirname + '/public/'));
+//Link public folder
 app.use('/', express.static(path.join(__dirname, '/public')));
-//app.use(express.static(path.join(__dirname,'public')))
 
 //Content Page
 app.get("/", function (req, res) {
     res.status(200).render('page', {
         pageData: pageData[0],
         stats: pageData[0].content2,
-        typelocation: true
+        typeLocation: true
     });
 })
 
@@ -30,7 +28,7 @@ app.get("/home", function (req, res) {
     res.status(200).render('page', {
         pageData: pageData[0],
         stats: pageData[0].content2,
-        typelocation: true
+        typeLocation: true
     });
 })
 
@@ -48,6 +46,7 @@ app.get("/location", function (req, res, next) {
         type: pageType
     })
 })
+
 //Locations specific
 app.get("/location/:post", function (req, res, next) {
     var exists
@@ -64,7 +63,7 @@ app.get("/location/:post", function (req, res, next) {
          res.status(200).render('page', {
             pageData: pageData[index],
             stats: pageData[index].content2,
-            typelocation: true
+            typeLocation: true
         });
     }
     else {
@@ -85,7 +84,7 @@ app.get("/encounter", function(req, res, next) {
     pageType = 'encounter';
     res.status(200).render('list', {
         listArray: encountersArray,
-        type: pageType
+        type: pageType,
     });
 })
 
@@ -105,6 +104,7 @@ app.get("/encounter/:post", function (req, res, next) {
          res.status(200).render('page', {
             pageData: pageData[index],
             stats: pageData[index].content2,
+            typeEncounter: true
         });
     }
     else {
@@ -125,7 +125,7 @@ app.get("/item", function (req, res, next) {
     pageType = 'item';
     res.status(200).render('list', {
         listArray: itemsArray,
-        type: pageType
+        type: pageType,
     });
 })
 
@@ -145,6 +145,7 @@ app.get("/item/:post", function (req, res, next) {
          res.status(200).render('page', {
             pageData: pageData[index],
             stats: pageData[index].content2,
+            typeItem: true
         });
     }
     else {
@@ -185,6 +186,7 @@ app.get("/creature/:post", function (req, res, next) {
          res.status(200).render('page', {
             pageData: pageData[index],
             stats: pageData[index].content2,
+            typeCreature: true
         });
     }
     else {
@@ -225,6 +227,7 @@ app.get("/class/:post", function (req, res, next) {
          res.status(200).render('page', {
             pageData: pageData[index],
             stats: pageData[index].content2,
+            typeClass: true
         });
     }
     else {
@@ -239,7 +242,7 @@ app.get("/music", function (req, res, next) {
     res.status(200).redirect('https://cephanox.bandcamp.com/')
 })
 
-// listen on port 
+//Listen on port 
 app.listen(port, function(err) {
     if(err) {
         throw err;

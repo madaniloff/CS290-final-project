@@ -231,3 +231,6 @@ p {
     transform: scale(1.1);
    cursor:pointer;
 }
+
+/*Make first letter capital for list page */
+.list-page-header:first-letter {text-transform: uppercase}
