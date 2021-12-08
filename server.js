@@ -53,7 +53,7 @@ app.get("/locations/:post", function (req, res, next) {
 //Encounters
 app.get("/encounters", function(req, res, next) {
     pageType = 'encounters';
-    res.status(200).render('contentPage', {
+    res.status(200).render('page', {
         pageData,
         pageType
     });
@@ -70,7 +70,7 @@ app.get("/encounters/:post", function (req, res, next) {
         }
     });
     if(exists === 1 ){
-        res.status(200).render('contentPage', {
+        res.status(200).render('page', {
             pageData, 
             post,
             pageType
@@ -87,7 +87,7 @@ app.get("/encounters/:post", function (req, res, next) {
 //Items
 app.get("/items", function (req, res, next) {
     pageType = 'items';
-    res.status(200).render('contentPage', {
+    res.status(200).render('page', {
         pageData,
         pageType
     });
@@ -104,7 +104,7 @@ app.get("/items/:post", function (req, res, next) {
         }
     });
     if(exists === 1){
-        res.status(200).render('contentPage', {
+        res.status(200).render('page', {
             pageData, 
             post,
             pageType
@@ -121,7 +121,7 @@ app.get("/items/:post", function (req, res, next) {
 //Characters
 app.get("/characters", function (req, res, next) {
     pageType = 'characters';
-    res.status(200).render('contentPage', {
+    res.status(200).render('page', {
         pageData,
         pageType
     });
