@@ -1,6 +1,7 @@
 var express = require('express');
 var exphbs = require('express-handlebars');
 var pageData = require('./postData.json'); 
+var suggestionData = require("suggestionData.json");
 const path = require('path');
 
 //Default port 7000
@@ -13,6 +14,34 @@ app.set('view engine', 'handlebars');
 
 //Link public folder
 app.use('/', express.static(path.join(__dirname, '/public')));
+
+app.use(express.json());
+
+// Post suggestion
+app.post("/suggestion/add", function(req, res, next){
+    var suggestion = req.body.suggestion
+    if(suggestion){
+        suggestionData.push({
+            suggestion: suggestion
+        })
+
+        fs.writeFile(
+            __dirname + '/suggestionData.json',
+            JSON.stringify(suggestionData, null, 2), function(err){
+                if(!err){
+                    res.status(200).send("Suggestion uploaded successfully");
+                }
+                else{
+                    res.status(500).send("Error uploading suggestion");
+                }
+            }
+        )
+    }
+    else{
+        res.status(400).send("Please enter suggestion content.");
+    }
+    next();   
+})
 
 //Content Page
 app.get("/", function (req, res) {
@@ -242,6 +271,14 @@ app.get("/music", function (req, res, next) {
     res.status(200).redirect('https://cephanox.bandcamp.com/')
 })
 
+//Suggestion
+app.get('/suggestions', function(req, res, next){
+    pageType = 'suggestion'
+    res.status(200).render('suggestion', {
+        suggestionData
+    })
+})
+
 //Listen on port 
 app.listen(port, function(err) {
     if(err) {
@@ -249,29 +286,4 @@ app.listen(port, function(err) {
     }
     console.log("Listening on port", port);
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
