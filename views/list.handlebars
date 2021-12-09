@@ -1,58 +1,51 @@
+<div class = "border">
+    <div class = "title-content">
+        <h1>{{type}}</h1>
+    </div>
 
-    <body id = 'wholePageColor'>
+    {{#each listArray}}
+        <a class = "list-link" href="{{this.type}}/{{this.link}}">
+            <div class = "list-content">
+                <img class = "list-image" src = {{this.imageURL}}>
+                <h1>{{this.title}}</h1>
+            </div>
+        </a>
+    {{/each}}
+</div>
 
-        <main class = "content">
+<div class = "border">
+    <div class = "title-content">
+        <h1>User Suggestions</h1>
+    </div>
 
-                <div class = "listHeader">
-                    <h1 class = "list-page-header">{{type}} List Page</h1>
-                </div>
+    {{#each suggestions}}
+        <a class = "list-link" href="{{this.type}}/{{this.link}}">
+            <div class = "content">
+                <h1>{{this.description}}</h1>
+            </div>
+        </a>
+    {{/each}}
+</div>
 
-                <section class = "contentLinks">
+<button type = "button" id = "add-suggestion"><i class="far fa-comment-dots"></i></button>
 
-                 {{#each listArray}}
-                     {{> linkTemplate description = this.title type = this.type link = this.link}}
-                 {{/each}}
-          
-
-                </section>
+<div id = "backdrop" class = "hide">
+    <div id = "suggestion-box" class="hide">
+        <div class = "layout-suggest-box">
+            <div class = "suggestion-box-header"> 
+                <h1>Add a Suggestion</h1>
+            </div>
                 
-                <section class = "suggestionLinks">
-                    <h1 class = "suggestionHeader">
-                        Suggestions
-                    </h1> 
-                    {{#each suggestions}}
-                        {{>linkTemplate description = this.description type = this.type link = this.link }}
-                    {{/each}}
-                </section>
-
-        </main>
-
-        <button type = "button" id = "add-suggestion"><i class="far fa-comment-dots"></i></button>
-
-        <div id = "backdrop" class = "hide"></div>
-
-
-        <div id = "suggestion-box" class="hide">
-            <div class = "layout-suggest-box">
-                <div class = "suggestion-box-header"> 
-                    <h1>Add a Suggestion</h1>
-                </div>
-                    
-                <div class= "text-container">
-                    <textarea id= "suggestion-title" placeholder= "Enter Suggestion Title Here"></textarea> 
-                    <br>
-                    <textarea id = "text-area-class" placeholder= "Enter Suggestion Here..."></textarea>
-                </div>
-
-                <div class = "footer-box">
-                    <button type = "button" id = "cancal-post">Cancel</button>
-                    <button type="button" id = "submit-post">Submit</button>
-                
-                </div>
-
+            <div class= "text-container">
+                <textarea id= "suggestion-title" placeholder= "Enter Suggestion Title Here"></textarea> 
+                <br>
+                <textarea id = "text-area-class" placeholder= "Enter Suggestion Here..."></textarea>
             </div>
 
+            <div class = "footer-box">
+                <button type = "button" id = "cancal-post">Cancel</button>
+                <button type="button" id = "submit-post">Submit</button>
+            </div>
         </div>
-
-
-    </body>
+    </div>
+</div>
