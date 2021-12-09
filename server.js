@@ -18,7 +18,7 @@ app.use('/', express.static(path.join(__dirname, '/public')));
 
 app.use(express.json());
 
-// Post suggestion
+//Post suggestion
 app.post("/suggestion/add", function(req, res, next){
     var suggestion = req.body.content
     var title = req.body.description
