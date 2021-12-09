@@ -19,21 +19,36 @@ app.use("/", express.static(path.join(__dirname, "/public")));
 app.use(express.json());
 
 //Content Page
-app.get("/", function (req, res) {
+
+app.get("/", function(req, res) {
     res.status(200).render("page", {
-        pageData: pageData[0],
-        stats: pageData[0].content2,
-        typeLocation: true
+        pageData: pageData[0]
     });
 })
 
-//Home
-app.get("/home", function (req, res) {
-    res.status(200).render("page", {
-        pageData: pageData[0],
-        stats: pageData[0].content2,
-        typeLocation: true
-    });
+app.get("/:path1/:path2", function(req, res) {
+    var path2 = req.params.path2;
+    var index = -1;
+
+    for (var i = 0; i < pageData.length; i++)
+        if (pageData[i].link === path2)
+            var index = i;
+
+    if (index != -1) {
+        if (pageData[index].type === "creature")
+            var typeCreature = true;
+        else
+            var typeCreature = false;
+
+        res.status(200).render("page", {
+            pageData: pageData[index],
+            typeCreature: typeCreature
+        });
+    }
+    else
+        res.status(404).render("404", {
+            path: req.url
+        });
 })
 
 //Post suggestion
@@ -88,32 +103,6 @@ app.get("/creature", function (req, res) {
     }); 
 })
 
-//Creatures specific
-app.get("/creature/:post", function (req, res, next) {
-    var exists
-    var post = req.params.post
-    pageType = "creature";
-    //Check to make sure link exists
-    for (var i = 0; i < pageData.length; i++) {
-        if (pageData[i].link === post && pageData[i].type === "creature") {
-            exists = true
-            var index = i
-        }
-    }
-    if (exists === true) {
-         res.status(200).render("page", {
-            pageData: pageData[index],
-            stats: pageData[index].content2,
-            typeCreature: true
-        });
-    }
-    else {
-        res.status(404).render("404", {
-            path: req.url
-        });
-    }
-})
-
 //Locations
 app.get("/location", function (req, res, next) {
     var locationsArray = []
@@ -133,32 +122,6 @@ app.get("/location", function (req, res, next) {
         type: pageType,
         suggestions: suggestionArray
     })
-})
-
-//Locations specific
-app.get("/location/:post", function (req, res, next) {
-    var exists
-    var post = req.params.post
-    pageType = "location";
-    //Check to make sure link exists
-    for (var i = 0; i < pageData.length; i++) {
-        if (pageData[i].link === post && pageData[i].type === "location") {
-            exists = true
-            var index = i
-        }
-    }
-    if (exists === true) {
-         res.status(200).render("page", {
-            pageData: pageData[index],
-            stats: pageData[index].content2,
-            typeLocation: true
-        });
-    }
-    else {
-        res.status(404).render("404", {
-            path: req.url
-        });
-    }
 })
 
 //Encounters
@@ -183,32 +146,6 @@ app.get("/encounter", function(req, res, next) {
     });
 })
 
-//Encounters specific
-app.get("/encounter/:post", function (req, res, next) {
-    var exists
-    var post = req.params.post
-    pageType = "encounter";
-    //Check to make sure link exists
-    for (var i = 0; i < pageData.length; i++) {
-        if (pageData[i].link === post && pageData[i].type === "encounter") {
-            exists = true
-            var index = i
-        }
-    }
-    if (exists === true) {
-         res.status(200).render("page", {
-            pageData: pageData[index],
-            stats: pageData[index].content2,
-            typeEncounter: true
-        });
-    }
-    else {
-        res.status(404).render("404", {
-            path: req.url
-        });
-    }    
-})
-
 //Items
 app.get("/item", function (req, res, next) {
     var itemsArray = []
@@ -231,32 +168,6 @@ app.get("/item", function (req, res, next) {
     });
 })
 
-//Items specific
-app.get("/item/:post", function (req, res, next) {
-    var exists
-    var post = req.params.post
-    pageType = "item";
-    //Check to make sure link exists
-    for (var i = 0; i < pageData.length; i++) {
-        if (pageData[i].link === post && pageData[i].type === "item") {
-            exists = true
-            var index = i
-        }
-    }
-    if (exists === true) {
-         res.status(200).render("page", {
-            pageData: pageData[index],
-            stats: pageData[index].content2,
-            typeItem: true
-        });
-    }
-    else {
-        res.status(404).render("404", {
-            path: req.url
-        });
-    }
-})
-
 //Classes
 app.get("/class", function (req, res, next) {
     var classArray = []
@@ -277,32 +188,6 @@ app.get("/class", function (req, res, next) {
         type: pageType,
         suggestions: suggestionArray
     });
-})
-
-//Classes specific
-app.get("/class/:post", function (req, res, next) {
-    var exists
-    var post = req.params.post
-    pageType = "class";
-    //Check to make sure link exists
-    for (var i = 0; i < pageData.length; i++) {
-        if (pageData[i].link === post && pageData[i].type === "class") {
-            exists = true
-            var index = i
-        }
-    }
-    if (exists === true) {
-         res.status(200).render("page", {
-            pageData: pageData[index],
-            stats: pageData[index],
-            typeClass: true
-        });
-    }
-    else {
-        res.status(404).render("404", {
-            path: req.url
-        });
-    }
 })
 
 //Music
@@ -328,7 +213,6 @@ app.get("/:type/suggestion/:post", function(req, res, next){
         });
     }
 })
-
 
 //Listen on port 
 app.listen(port, function(err) {

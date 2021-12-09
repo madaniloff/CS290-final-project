@@ -11,7 +11,7 @@
                     {{#unless this.table}}
                         <p>{{{this.paragraphs}}}</p>
                     {{else}}
-                        <table>
+                        <table class = "main-table">
                             {{#each this.paragraphs}}
                                 <tr>
                                     <th>{{{column1}}}</th>
@@ -24,30 +24,17 @@
             {{/each}}
 
             {{#if typeCreature}}
-                {{> creatures-main stats}}
+                {{> creatures-main pageData}}
             {{/if}}
         </div>
         <div id = "right-column">
-            <div class = "content">
+            <div class = "content vertical-box">
                 <img class = "post-image" src = {{pageData.imageURL}}>
-                {{#if typeLocation}}
-                    {{> location stats}}
-                {{/if}}
-
-                {{#if typeEncounter}}
-                    {{> encounters stats}}
-                {{/if}}
-
-                {{#if typeItem}}
-                    {{> items stats}}
-                {{/if}}
 
                 {{#if typeCreature}}
-                    {{> creatures stats}}
-                {{/if}}
-
-                {{#if typeClass}}
-                    {{> class stats}}
+                    {{> creature pageData}}
+                {{else}}
+                    {{> stats pageData}}
                 {{/if}}
             </div>
         </div>

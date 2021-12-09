@@ -24,44 +24,45 @@
             {"heading": "Axiomatic Force.", "paragraphs": "A conductor is one of the highest ranking officers in the Axiomatic hierarchy, and there are only eight known conductors in existence. Conductors are vital to the functionality of the entire Axiomatic Hivemind, and their primary responsibility is to gather energy, which they transmit to the rest of the Hivemind via an electromagnetic field. A conductor always acts within the best interests of the Hivemind. It knows no morals or mercy, and it may gather this energy from any source that will produce it. Conductors typically seek out areas where immensely powerful beings dwell or where major events are taking place, where they then extract energy with frightening precision and efficiency."},
             {"heading": "Circuit of Life.", "paragraphs": "Life is one of the most efficient sources of energy, and conductors are exceptionally well-equipped to take it. Behemoths that would threaten entire cities may be felled by a single conductor, who acts with perfect planning and has an encyclopedic knowledge of seemingly every creature in Omnaeus. A report from Guinn that was written by members of the Axiomatic Hivemind stated that conductors are so ruthless in their extraction of energy that they may even remove all memory of a being's existence in the process. Scholars speculate that conductors may be the primary cause of death in celestial societies, though no one can know for certain if conductors are capable of such summary destruction because there are no recorded incidents of anything being erased from history."}
         ],
+        "size": "Medium",
+        "creature-type": "construct",
+        "alignment": "lawful neutral",
+        "cr": "20",
+        "ac": "20",
+        "hit-points": "199 [21d8 + 105]",
+        "speed": "80 ft.",
+        "ability-scores": ["20", "20", "20", "24", "18", "18"],
+        "proficiency-bonus": "+6",
         "content2": {
-            "size": "Medium",
-            "creature-type": "construct",
-            "alignment": "lawful neutral",
-            "ac": "20",
-            "hit-points": "199 [21d8 + 105]",
-            "speed": "80 ft.",
-            "ability-scores": ["20", "20", "20", "24", "18", "18"],
-            "proficiency-bonus": "+6",
-            "saving-throws": "Dex +11, Con +11, Int +13, Wis +10",
-            "proficiencies": "Athletics +11",
+            "saving throws": ["DEX +11", "CON +11", "INT +13", "WIS +10"],
+            "proficiencies": ["athletics +11"],
             "resistances": "",
-            "immunities": "lightning, poison",
-            "condition-immunities": "blinded, charmed, deafened, diseased, exhaustion, frightened, poisoned",
+            "immunities": ["lightning", "poison"],
+            "condition immunities": ["blinded", "charmed", "deafened", "diseased", "exhaustion", "frightened", "poisoned"],
             "vulnerabilities": "",
             "senses": "",
-            "languages": "Common",
-            "cr": "20",
-            "passives": [
-                {"name": "Constant Repairs", "effect": "At the start of the conductor's turn, the conductor regains 11 (1d12 + 5) hit points."},
-                {"name": "One of a Kind", "effect": "The conductor has a unique feature depending on which of the eight conductors it is."},
-                {"name": "Purge", "effect": "Whenever one of the conductor's features recharges, the conductor can choose a creature within 50 feet. The target must succeed on a DC 19 Dexterity saving throw or take 11 (1d12 + 5) lightning damage. On a successful save, the target takes half as much damage."}
-            ],
-            "actions": [
-                {"name": "Rapier", "effect": "Melee Weapon \n \n Attack: 1d20+11 to hit, reach 5 ft., one target. \n \n Hit: 9 (1d8 + 5) piercing damage."},
-                {"name": "Brutal Flurry \n (Recharge 5-6)", "effect": "As an action, the conductor makes ten rapier attacks. These attacks ignore all resistances and immunities."},
-                {"name": "Disarming Flourish \n (Recharge 5-6)", "effect": "As an action, the conductor makes a disarm attack against a creature within 5 feet who is wielding a melee weapon. If the attack is successful, the conductor picks up the weapon and makes five attacks with it. The conductor then makes a ranged weapon attack with it against a target within 100 feet, as if the weapon has the thrown property."},
-                {"name": "Orbital Suplex \n (Recharge 5-6)", "effect": "As an action, the conductor makes a grapple attack against a creature within 5 feet. If the grapple is successful, the target is restrained until the start of the conductor's next turn, and the conductor's Phase feature recharges. While the target is restrained by this feature, the target moves with the conductor whenever the conductor moves. A creature restrained by this feature can be freed if it or another creature within 5 feet takes an action to make a DC 19 Athletics check and succeeds."}
-            ],
-            "bonus-actions": [
-                {"name": "Rapid Update", "effect": "As a bonus action, the conductor changes its speed to be walking, burrowing, climbing, flying, or swimming speed."},
-                {"name": "Overload \n (Recharge 5-6)", "effect": "As a bonus action, the conductor gains an additional use of its action."},
-                {"name": "Recharge \n (Recharge 5-6)", "effect": "As a bonus action, the conductor recharges all of its recharge abilities."}
-            ],
-            "reactions": [
-                {"name": "Firewall \n (Recharge 5-6)", "effect": "As a reaction, the conductor adds its proficiency bonus to its AC for a turn."},
-                {"name": "Phase \n (Recharge 5-6)", "effect": "As a free reaction, the conductor teleports up to 80 feet in any direction."}
-            ]},
+            "languages": ["Common"]
+        },
+        "passives": [
+            {"name": "Constant Repairs", "effect": "At the start of the conductor's turn, the conductor regains 11 (1d12 + 5) hit points."},
+            {"name": "One of a Kind", "effect": "The conductor has a unique feature depending on which of the eight conductors it is."},
+            {"name": "Purge", "effect": "Whenever one of the conductor's features recharges, the conductor can choose a creature within 50 feet. The target must succeed on a DC 19 Dexterity saving throw or take 11 (1d12 + 5) lightning damage. On a successful save, the target takes half as much damage."}
+        ],
+        "actions": [
+            {"name": "Rapier", "effect": "Melee Weapon \n \n Attack: 1d20+11 to hit, reach 5 ft., one target. \n \n Hit: 9 (1d8 + 5) piercing damage."},
+            {"name": "Brutal Flurry \n (Recharge 5-6)", "effect": "As an action, the conductor makes ten rapier attacks. These attacks ignore all resistances and immunities."},
+            {"name": "Disarming Flourish \n (Recharge 5-6)", "effect": "As an action, the conductor makes a disarm attack against a creature within 5 feet who is wielding a melee weapon. If the attack is successful, the conductor picks up the weapon and makes five attacks with it. The conductor then makes a ranged weapon attack with it against a target within 100 feet, as if the weapon has the thrown property."},
+            {"name": "Orbital Suplex \n (Recharge 5-6)", "effect": "As an action, the conductor makes a grapple attack against a creature within 5 feet. If the grapple is successful, the target is restrained until the start of the conductor's next turn, and the conductor's Phase feature recharges. While the target is restrained by this feature, the target moves with the conductor whenever the conductor moves. A creature restrained by this feature can be freed if it or another creature within 5 feet takes an action to make a DC 19 Athletics check and succeeds."}
+        ],
+        "bonus-actions": [
+            {"name": "Rapid Update", "effect": "As a bonus action, the conductor changes its speed to be walking, burrowing, climbing, flying, or swimming speed."},
+            {"name": "Overload \n (Recharge 5-6)", "effect": "As a bonus action, the conductor gains an additional use of its action."},
+            {"name": "Recharge \n (Recharge 5-6)", "effect": "As a bonus action, the conductor recharges all of its recharge abilities."}
+        ],
+        "reactions": [
+            {"name": "Firewall \n (Recharge 5-6)", "effect": "As a reaction, the conductor adds its proficiency bonus to its AC for a turn."},
+            {"name": "Phase \n (Recharge 5-6)", "effect": "As a free reaction, the conductor teleports up to 80 feet in any direction."}
+        ],
         "imageURL": "/images/Conductor.png"
     },
     {
@@ -182,7 +183,9 @@
             {"heading": "Ascendant Angler", "paragraphs": "11th-level Dreamcatcher feature \n \n You have a technique for catching nearly any foe, which grants you the following benefits. \n \n <b>Catch of the Day.</b> You can now have the same creature hooked multiple times. Whenever a creature would be freed from being hooked, it is instead freed from only one hook. Whenever you target a creature with Reel In or Cast Out, you can repeat the same effect on the same creature for each additional hook that it is hooked by. \n \n <b>No Escape.</b> Your ranged weapon attacks weave in and out of the Astral Plane as they are made, allowing for them to pass through solid materials. Your ranged weapon attacks ignore all benefits provided by total cover or less. \n \n When you use Reel In or Cast Out, you can pull or launch the target directly through solid materials. If this ability causes a creature to occupy the same space as a solid object, the creature moves to the closest available space. \n \n <b>Plenty of Fish.</b> You can now have an unlimited number of creatures hooked at the same time. Whenever you use Reel In or Cast Out, you can target up to all of the creatures that you have hooked at once."},
             {"heading": "Binding Constellation", "paragraphs": "15th-level dreamcatcher feature \n \n You can trap enemies in an astral net. As an action, you can deploy a number of tethers up to your Wisdom modifier (minimum of three tethers), placing each of them in different spaces within 20 feet of you. These tethers last until this feature can be used again, at which point they dissipate. \n \n As a bonus action, you can move a tether that is within 20 feet of you to another space within 20 feet of you. \n \n All of the tethers are connected to each other by ethereal walls of magical energy that are 5 feet high and 1 foot thick. Whenever a creature of your choice starts its turn while surrounded by these walls on at least three sides, it must make a Charisma saving throw against your spell save DC. On a failure, it is restrained until the start of its next turn. \n \n Once you use this feature, you can't use it again until you finish a short rest."}
         ],
-        "imageURL": "/images/Dreamcatcher.jpg",
-        "class-type": "Ranger Subclass"
+        "content2": {
+            "class type": "Ranger Subclass"
+        },
+        "imageURL": "/images/Dreamcatcher.jpg"
     }
 ]
