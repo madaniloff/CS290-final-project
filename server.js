@@ -18,7 +18,7 @@ app.use('/', express.static(path.join(__dirname, '/public')));
 
 app.use(express.json());
 
-// Post suggestion
+//Post suggestion
 app.post("/suggestion/add", function(req, res, next){
     var suggestion = req.body.content
     var title = req.body.description
@@ -295,7 +295,7 @@ app.get("/class/:post", function (req, res, next) {
     if (exists === true) {
          res.status(200).render('page', {
             pageData: pageData[index],
-            stats: pageData[index].content2,
+            stats: pageData[index],
             typeClass: true
         });
     }
