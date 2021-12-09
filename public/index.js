@@ -63,7 +63,8 @@ function postSuggestion(){
         var suggestionObj = {
             type: pageType,
             link: title,
-            description: textBox
+            description: title,
+            content: textBox
         }
 
         var reqBody = JSON.stringify(suggestionObj)
@@ -72,9 +73,7 @@ function postSuggestion(){
 
         req.addEventListener('load', function(event){
             if(event.target.status === 200){
-                var newSuggestionHTML = Handlebars.templates.linkTemplate(suggestionObj)
-                var suggestionContainer = document.querySelector('suggestionLinks')
-                suggestionContainer.insertAdjacentHTML('beforeend', newSuggestionHTML)
+                location.reload()
             }
             else{
                 alert("Error posting suggestion.")
