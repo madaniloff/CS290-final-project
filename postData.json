@@ -79,7 +79,7 @@
             "location": "Core of Omnaeus",
             "size": "~800 million cubic miles",
             "population": "~2 million clockwork soldiers",
-            "date": "1st of Tilt, 0 - Present"
+            "era": "1st of Tilt, 0 - Present"
         }
     },
     {
@@ -96,7 +96,7 @@
             "location": "Northern Hemisphere, around the Major Key",
             "size": "~3.5 million square miles",
             "population": "~100 million humans, ~200 million clockwork soldiers",
-            "date": "12th of Tilt, 1245 - Present"           
+            "era": "12th of Tilt, 1245 - Present"           
         },
         "imageURL": "/images/Guinn.jpg"
     },
