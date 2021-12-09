@@ -285,13 +285,22 @@ p {
     
 }
 
-#text-area-class{
-    text-align: center;
-    font-size: 20px;
+#suggestion-title{
+	text-align: center;
+    font-size: 18px;
     border-radius: 20px;
     border: none;
     width: 500px;
-    height: 220px;
+    height: 30px;
+}
+
+#text-area-class{
+    text-align: center;
+    font-size: 18px;
+    border-radius: 20px;
+    border: none;
+    width: 500px;
+    height: 160px;
 }
 
 .footer-box{
