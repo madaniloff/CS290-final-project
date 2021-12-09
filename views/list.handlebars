@@ -22,7 +22,10 @@
                 <section class = "suggestionLinks">
                     <h1 class = "suggestionHeader">
                         Suggestions
-                    </h1>
+                    </h1> 
+                    {{#each suggestions}}
+                        {{>linkTemplate description = this.description type=this.type link=this.link }}
+                    {{/each}}
                 </section>
 
         </main>
@@ -37,10 +40,11 @@
                 <div class = "suggestion-box-header"> 
                     <h1>Add a Suggestion</h1>
                 </div>
-
-
+                    
                 <div class= "text-container">
-                    <textarea id = "text-area-class" placeholder= "Enter Text Here..."></textarea>
+                    <textarea id= "suggestion-title" placeholder= "Enter Suggestion Title Here"></textarea> 
+                    <br>
+                    <textarea id = "text-area-class" placeholder= "Enter Suggestion Here..."></textarea>
                 </div>
 
                 <div class = "footer-box">
