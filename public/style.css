@@ -102,9 +102,6 @@ body {
 }
 
 #navbar-right input {
-    width: 250px;
-    height: 40px;
-
     font-family: "Georgia";
     font-size: 30px;
 
@@ -112,6 +109,9 @@ body {
     border-width: 5px;
     border-style: outset;
     border-color: white;
+
+    width: 250px;
+    height: 40px;
 }
 
 #logo {
@@ -147,6 +147,10 @@ body {
     justify-content: center;   
 }
 
+#left-column {
+    z-index: 1;
+}
+
 .content {
     background-image: url("./images/paper.jpg");
 
@@ -160,13 +164,17 @@ body {
     font-family: "Outfit";
     color: black;
 
-    padding: 25px;
+    padding: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
     margin: 10px;
 
     box-shadow: -40px -5px 60px -30px black;
 }
 
 .title-content {
+    display: inline-block;
+
     background-image: url("./images/paper.jpg");
 
     border: 2px;
@@ -179,26 +187,29 @@ body {
     font-family: "Outfit";
     color: black;
 
-    padding: 0px;
+    padding: 5px;
     padding-left: 25px;
     padding-right: 25px;
-    margin: 25px;
+    margin: 10px;
 
-    width: max-content;
+    min-width: max-content;
 
     align-self: center;
     text-align: center;
 
-    font-size: 20px;
-
     box-shadow: -40px -5px 60px -15px black;
+}
+
+h1 {
+    display: inline;
+    font-size: 2.5vw;
 }
 
 p {
     font-size: 20px;
     padding-left: 15px;
 
-    white-space: pre-wrap;
+    white-space: pre-line;
 }
 
 .post-image {
