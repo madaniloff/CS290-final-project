@@ -11,6 +11,10 @@
                     <p>{{this.paragraphs}}</p>
                 </div>
             {{/each}}
+
+            {{#if typeCreature}}
+                {{> creatures-main stats}}
+            {{/if}}
         </div>
         <div id = "right-column">
             <div class = "content">
@@ -24,15 +28,15 @@
                 {{/if}}
 
                 {{#if typeItem}}
-                    {{>items stats}}
+                    {{> items stats}}
                 {{/if}}
 
                 {{#if typeCreature}}
-                    {{>creatures stats}}
+                    {{> creatures stats}}
                 {{/if}}
 
                 {{#if typeClass}}
-                    {{>class stats}}
+                    {{> class stats}}
                 {{/if}}
 
             </div>
