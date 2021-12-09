@@ -46,20 +46,24 @@ function closeSuggestionModal(){
 }
 // ADD A POST 
 function postSuggestion(){
+    var title = document.getElementById('suggestion-title').value.trim()
     var textBox = document.getElementById('text-area-class').value.trim()
     console.log(textBox)
 
-    if (!textBox){
-        alert("Please enter text!!!!!")
+    if (!textBox || !title){
+        alert("Please enter text in all fields...")
     }
     else{
-
+        var pagePath = window.location.pathname
+        var pageType = pagePath.substring(1)
         var req = new XMLHttpRequest();
         var url = '/suggestion/add';
         req.open('POST', url);
 
         var suggestionObj = {
-            suggestion: textBox
+            type: pageType,
+            link: title,
+            description: textBox
         }
 
         var reqBody = JSON.stringify(suggestionObj)
@@ -68,9 +72,8 @@ function postSuggestion(){
 
         req.addEventListener('load', function(event){
             if(event.target.status === 200){
-                var suggestionTemplate = Handlebars.templates.suggestion
-                var newSuggestionHTML = suggestionTemplate(suggestionObj)
-                var suggestionContainer = document.querySelector('suggestionContent')
+                var newSuggestionHTML = Handlebars.templates.linkTemplate(suggestionObj)
+                var suggestionContainer = document.querySelector('suggestionLinks')
                 suggestionContainer.insertAdjacentHTML('beforeend', newSuggestionHTML)
             }
             else{
