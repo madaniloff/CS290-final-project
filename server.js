@@ -20,13 +20,14 @@ app.use(express.json());
 
 // Post suggestion
 app.post("/suggestion/add", function(req, res, next){
-    var suggestion = req.body.description
-    var title = req.body.link
+    var suggestion = req.body.content
+    var title = req.body.description
     if(suggestion && title){
         suggestionData.push({
             type: req.body.type,
-            link: title,
-            description: suggestion
+            link: "suggestion/" + title,
+            description: title,
+            content: suggestion
         })
 
         fs.writeFile(
@@ -308,6 +309,25 @@ app.get("/class/:post", function (req, res, next) {
 //Music
 app.get("/music", function (req, res, next) {
     res.status(200).redirect('https://cephanox.bandcamp.com/')
+})
+
+//Suggestion
+app.get('/:type/suggestion/:post', function(req, res, next){
+    var post = req.params.post
+    var type = req.params.type
+    for(var i = 0; i < suggestionData.length; i++){
+        if(suggestionData[i].description === post && suggestionData[i].type === type){
+            var suggestion = suggestionData[i]
+        }
+    }
+    if(suggestion){
+        res.status(200).render('suggestion', suggestion)
+    }
+    else{
+        res.status(404).render('404', {
+            path: req.url
+        });
+    }
 })
 
 
