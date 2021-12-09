@@ -1,8 +1,9 @@
 var express = require('express');
 var exphbs = require('express-handlebars');
 var pageData = require('./postData.json'); 
-var suggestionData = require("suggestionData.json");
+var suggestionData = require('./suggestionData.json');
 const path = require('path');
+const fs = require('fs');
 
 //Default port 7000
 var port = process.env.PORT || 7000;
@@ -19,10 +20,13 @@ app.use(express.json());
 
 // Post suggestion
 app.post("/suggestion/add", function(req, res, next){
-    var suggestion = req.body.suggestion
-    if(suggestion){
+    var suggestion = req.body.description
+    var title = req.body.link
+    if(suggestion && title){
         suggestionData.push({
-            suggestion: suggestion
+            type: req.body.type,
+            link: title,
+            description: suggestion
         })
 
         fs.writeFile(
@@ -32,6 +36,7 @@ app.post("/suggestion/add", function(req, res, next){
                     res.status(200).send("Suggestion uploaded successfully");
                 }
                 else{
+                    console.log(err)
                     res.status(500).send("Error uploading suggestion");
                 }
             }
@@ -39,8 +44,7 @@ app.post("/suggestion/add", function(req, res, next){
     }
     else{
         res.status(400).send("Please enter suggestion content.");
-    }
-    next();   
+    } 
 })
 
 //Content Page
@@ -64,15 +68,22 @@ app.get("/home", function (req, res) {
 //Locations
 app.get("/location", function (req, res, next) {
     var locationsArray = []
+    var suggestionArray = []
     for (var i = 0; i < pageData.length; i++) {
         if (pageData[i].type === 'location') {
             locationsArray.push(pageData[i])
         }
     }
+    for(var j = 0; j < suggestionData.length; j++){
+        if(suggestionData[j].type === 'location'){
+            suggestionArray.push(suggestionData[j])
+        }
+    }
     pageType = 'location'
     res.status(200).render('list', {
         listArray: locationsArray,
-        type: pageType
+        type: pageType,
+        suggestions: suggestionArray
     })
 })
 
@@ -105,15 +116,22 @@ app.get("/location/:post", function (req, res, next) {
 //Encounters
 app.get("/encounter", function(req, res, next) {
     var encountersArray = []
+    var suggestionArray = []
     for (var i = 0; i < pageData.length; i++) {
         if (pageData[i].type === 'encounter') {
             encountersArray.push(pageData[i])
+        }
+    }
+    for(var j = 0; j < suggestionData.length; j++){
+        if(suggestionData[j].type === 'encounter'){
+            suggestionArray.push(suggestionData[j])
         }
     }
     pageType = 'encounter';
     res.status(200).render('list', {
         listArray: encountersArray,
         type: pageType,
+        suggestions: suggestionArray
     });
 })
 
@@ -146,15 +164,22 @@ app.get("/encounter/:post", function (req, res, next) {
 //Items
 app.get("/item", function (req, res, next) {
     var itemsArray = []
+    var suggestionArray = []
     for (var i = 0; i < pageData.length; i++) {
         if (pageData[i].type === 'item') {
             itemsArray.push(pageData[i])
+        }
+    }
+    for(var j = 0; j < suggestionData.length; j++){
+        if(suggestionData[j].type === 'item'){
+            suggestionArray.push(suggestionData[j])
         }
     }
     pageType = 'item';
     res.status(200).render('list', {
         listArray: itemsArray,
         type: pageType,
+        suggestions: suggestionArray
     });
 })
 
@@ -187,15 +212,22 @@ app.get("/item/:post", function (req, res, next) {
 //Creatures
 app.get("/creature", function (req, res, next) {
     var creaturesArray = []
+    var suggestionArray = []
     for (var i = 0; i < pageData.length; i++) {
         if (pageData[i].type === 'creature') {
             creaturesArray.push(pageData[i])
         }
     }
+    for(var j = 0; j < suggestionData.length; j++){
+        if(suggestionData[j].type === 'creature'){
+            suggestionArray.push(suggestionData[j])
+        }
+    }
     pageType = 'creature'
     res.status(200).render('list', {
         listArray: creaturesArray,
-        type: pageType
+        type: pageType,
+        suggestions: suggestionArray
     }); 
 })
 
@@ -228,15 +260,22 @@ app.get("/creature/:post", function (req, res, next) {
 //Classes
 app.get("/class", function (req, res, next) {
     var classArray = []
+    var suggestionArray = []
     for (var i = 0; i < pageData.length; i++) {
         if (pageData[i].type === 'class') {
             classArray.push(pageData[i])
         }
     }
+    for(var j = 0; j < suggestionData.length; j++){
+        if(suggestionData[j].type === 'class'){
+            suggestionArray.push(suggestionData[j])
+        }
+    }
     pageType = 'class';
     res.status(200).render('list', {
         listArray: classArray,
-        type: pageType
+        type: pageType,
+        suggestions: suggestionArray
     });
 })
 
@@ -271,13 +310,6 @@ app.get("/music", function (req, res, next) {
     res.status(200).redirect('https://cephanox.bandcamp.com/')
 })
 
-//Suggestion
-app.get('/suggestions', function(req, res, next){
-    pageType = 'suggestion'
-    res.status(200).render('suggestion', {
-        suggestionData
-    })
-})
 
 //Listen on port 
 app.listen(port, function(err) {
