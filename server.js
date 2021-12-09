@@ -295,7 +295,7 @@ app.get("/class/:post", function (req, res, next) {
     if (exists === true) {
          res.status(200).render('page', {
             pageData: pageData[index],
-            stats: pageData[index].content2,
+            stats: pageData[index],
             typeClass: true
         });
     }

@@ -1,55 +1,39 @@
-<h2>size: {{size}}</h2>
-<h2>creature-type: {{creature-type}}</h2>
-<h2>alignment: {{alignment}}</h2>
-<h2>creature-type: {{creature-type}}</h2>
-<h2>ac: {{ac}}</h2>
-<h2>hit-points: {{hit-points}}</h2>
-<h2>speed: {{speed}}</h2>
+<h2>Size: {{size}}</h2>
+<h2>Creature-type: {{creature-type}}</h2>
+<h2>Alignment: {{alignment}}</h2>
+<h2>Creature-type: {{creature-type}}</h2>
+<h2>AC: {{ac}}</h2>
+<h2>Hit-points: {{hit-points}}</h2>
+<h2>Speed: {{speed}}</h2>
 {{#each ability-scores}}
-<h2>ability-scores: {{this}}</h2>
+<h2>Ability-scores: {{this}}</h2>
 {{/each}}
-<h2>proficiency-bonus: {{proficiency-bonus}}</h2>
-<h2>saving-throws: {{saving-throws}}</h2>
-<h2>proficiencies: {{proficiencies}}</h2>
-<h2>resistances: {{resistances}}</h2>
-<h2>immunities: {{immunities}}</h2>
-<h2>condition-immunities: {{condition-immunities}}</h2>
-<h2>vulnerabilities:{{vulnerabilities}}</h2>
-<h2>senses:{{senses}}</h2>
-<h2>languages:{{languages}}</h2>
+<h2>Proficiency-bonus: {{proficiency-bonus}}</h2>
+<h2>Saving-throws: {{saving-throws}}</h2>
+<h2>Proficiencies: {{proficiencies}}</h2>
+<h2>Resistances: {{resistances}}</h2>
+<h2>Immunities: {{immunities}}</h2>
+<h2>Condition-immunities: {{condition-immunities}}</h2>
+<h2>Vulnerabilities:{{vulnerabilities}}</h2>
+<h2>Senses:{{senses}}</h2>
+<h2>Languages:{{languages}}</h2>
 
-<h2>cr:{{cr}}</h2>
-
-{{#each passive-names}}
-<h2>passive-names:{{this}}</h2>
-{{/each}}
+<h2>CR:{{cr}}</h2>
 
 {{#each passives}}
-<h2>passives:{{this}}</h2>
-{{/each}}
-
-{{#each action-names}}
-<h2>action-names:{{this}}</h2>
+<h2>Passives: {{this.name}}</h2>
 {{/each}}
 
 {{#each actions}}
-<h2>actions:{{this}}</h2>
-{{/each}}
-
-{{#each bonus-action-names}}
-<h2>bonus-action-names:{{this}}</h2>
+<h2>Actions: {{this.name}}</h2>
 {{/each}}
 
 {{#each bonus-actions}}
-<h2>bonus-actions:{{this}}</h2>
-{{/each}}
-
-{{#each reaction-names}}
-<h2>reaction-names:{{this}}</h2>
+<h2>Bonus-actions: {{this.name}}</h2>
 {{/each}}
 
 {{#each reactions}}
-<h2>reactions:{{this}}</h2>
+<h2>Reactions: {{this.name}}</h2>
 {{/each}}
 
 
