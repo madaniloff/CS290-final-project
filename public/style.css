@@ -54,6 +54,10 @@ table {
 	margin: 48px;
 }
 
+.capitalize {
+	text-transform: capitalize;
+}
+
 .content {
 	background-image: url(/images/paper.jpg);
 	border: 2px;

@@ -19,22 +19,21 @@ app.use("/", express.static(path.join(__dirname, "/public")));
 app.use(express.json());
 
 //Content Page
-
 app.get("/", function(req, res) {
     res.status(200).render("page", {
         pageData: pageData[0]
     });
 })
 
-app.get("/:path1/:path2", function(req, res) {
-    var path2 = req.params.path2;
-    var index = -1;
+app.get("/:type/:path", function(req, res, next) {
+    var type = req.params.type;
+    var path = req.params.path;
 
     for (var i = 0; i < pageData.length; i++)
-        if (pageData[i].link === path2)
-            index = i;
+        if (pageData[i].type === type && pageData[i].link === path)
+            var index = i;
 
-    if (index != -1) {
+    if (index) {
         if (pageData[index].type === "creature")
             var typeCreature = true;
         else
@@ -46,39 +45,7 @@ app.get("/:path1/:path2", function(req, res) {
         });
     }
     else
-        res.status(404).render("404", {
-            path: req.url
-        });
-})
-
-//Post suggestion
-app.post("/suggestion/add", function(req, res, next){
-    var suggestion = req.body.content
-    var title = req.body.description
-    if(suggestion && title){
-        suggestionData.push({
-            type: req.body.type,
-            link: "suggestion/" + title,
-            description: title,
-            content: suggestion
-        })
-
-        fs.writeFile(
-            __dirname + "/suggestionData.json",
-            JSON.stringify(suggestionData, null, 2), function(err){
-                if(!err){
-                    res.status(200).send("Suggestion uploaded successfully");
-                }
-                else{
-                    console.log(err)
-                    res.status(500).send("Error uploading suggestion");
-                }
-            }
-        )
-    }
-    else{
-        res.status(400).send("Please enter suggestion content.");
-    } 
+        next()
 })
 
 //Creatures
@@ -91,7 +58,7 @@ app.get("/creature", function (req, res) {
             creaturesArray.push(pageData[i])
 
     for(var j = 0; j < suggestionData.length; j++)
-        if(suggestionData[j].type === "creature")
+        if (suggestionData[j].type === "creature")
             suggestionArray.push(suggestionData[j])
 
     pageType = "Creatures";
@@ -104,7 +71,7 @@ app.get("/creature", function (req, res) {
 })
 
 //Locations
-app.get("/location", function (req, res, next) {
+app.get("/location", function (req, res) {
     var locationsArray = []
     var suggestionArray = []
 
@@ -125,7 +92,7 @@ app.get("/location", function (req, res, next) {
 })
 
 //Encounters
-app.get("/encounter", function(req, res, next) {
+app.get("/encounter", function(req, res) {
     var encountersArray = []
     var suggestionArray = []
     for (var i = 0; i < pageData.length; i++) {
@@ -147,7 +114,7 @@ app.get("/encounter", function(req, res, next) {
 })
 
 //Items
-app.get("/item", function (req, res, next) {
+app.get("/item", function (req, res) {
     var itemsArray = []
     var suggestionArray = []
     for (var i = 0; i < pageData.length; i++) {
@@ -169,7 +136,7 @@ app.get("/item", function (req, res, next) {
 })
 
 //Classes
-app.get("/class", function (req, res, next) {
+app.get("/class", function (req, res) {
     var classArray = []
     var suggestionArray = []
     for (var i = 0; i < pageData.length; i++) {
@@ -191,34 +158,70 @@ app.get("/class", function (req, res, next) {
 })
 
 //Music
-app.get("/music", function (req, res, next) {
+app.get("/music", function (req, res) {
     res.status(200).redirect("https://cephanox.bandcamp.com/")
 })
 
 //Suggestion
-app.get("/:type/suggestion/:post", function(req, res, next){
-    var post = req.params.post
-    var type = req.params.type
-    for(var i = 0; i < suggestionData.length; i++){
-        if(suggestionData[i].description === post && suggestionData[i].type === type){
+app.get("/:type/suggestion/:post", function(req, res) {
+    var type = req.params.type;
+    var path = req.params.post;
+
+    for (let i = 0; i < suggestionData.length; i++)
+        if (suggestionData[i].type === type && suggestionData[i].link === path)
             var suggestion = suggestionData[i]
-        }
-    }
-    if(suggestion){
+
+    if (suggestion)
         res.status(200).render("suggestion", suggestion)
-    }
-    else{
+    else
         res.status(404).render("404", {
             path: req.url
         });
+})
+
+//Add suggestion
+app.post("/*/add", function(req, res) {
+    var type = req.body.type;
+    var title = req.body.title;
+    var link = req.body.link;
+    var content = req.body.content;
+
+    if (type && title && link && content) {
+        suggestionData.push({
+            type: type,
+            title: title,
+            link: link,
+            content: content
+        })
+
+        fs.writeFile(__dirname + "/suggestionData.json",
+            JSON.stringify(suggestionData, null, 2), function(err) {
+                if (!err)
+                    res.status(200).send("Suggestion uploaded successfully");
+                else {
+                    console.log(err);
+                    res.status(500).send("Error uploading suggestion");
+                }
+            }
+        )
     }
+    else
+        res.status(400).send("Please enter suggestion content.");
+})
+
+app.get("*", function(req, res) {
+    res.status(404).render("404", {
+        path: req.url
+    });
 })
 
 //Listen on port 
 app.listen(port, function(err) {
-    if(err) {
+    if (err) {
+        console.log("Error starting server");
         throw err;
     }
-    console.log("Listening on port", port);
+    else
+        console.log("Listening on port", port);
 });
 
