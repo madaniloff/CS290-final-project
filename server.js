@@ -160,7 +160,7 @@ app.get("/class", function (req, res) {
 
 //Music
 app.get("/music", function (req, res) {
-    res.status(200).redirect("https://cephanox.bandcamp.com/")
+    res.status(200).redirect("https://cephanox.bandcamp.com/album/dreamt-into-existence")
 })
 
 //Suggestion
