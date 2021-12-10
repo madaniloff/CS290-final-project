@@ -1,6 +1,8 @@
-<div class = "title-content">
-    <h1>Passives</h1>
-</div>
+{{#if passives}}
+    <div class = "title-content">
+        <h1>Passives</h1>
+    </div>
+{{/if}}
 
 {{#each passives}}
     <div class = "content">
@@ -9,9 +11,11 @@
     </div>
 {{/each}}
 
-<div class = "title-content">
-    <h1>Actions</h1>
-</div>
+{{#if actions}}
+    <div class = "title-content">
+        <h1>Actions</h1>
+    </div>
+{{/if}}
 
 {{#each actions}}
     <div class = "content">
@@ -20,9 +24,11 @@
     </div>
 {{/each}}
 
-<div class = "title-content">
-    <h1>Bonus Actions</h1>
-</div>
+{{#if bonus-actions}}
+    <div class = "title-content">
+        <h1>Bonus Actions</h1>
+    </div>
+{{/if}}
 
 {{#each bonus-actions}}
     <div class = "content">
@@ -31,9 +37,11 @@
     </div>
 {{/each}}
 
-<div class = "title-content">
-    <h1>Reactions</h1>
-</div>
+{{#if reactions}}
+    <div class = "title-content">
+        <h1>Reactions</h1>
+    </div>
+{{/if}}
 
 {{#each reactions}}
     <div class = "content">

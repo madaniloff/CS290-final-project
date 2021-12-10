@@ -24,12 +24,12 @@
             {"heading": "Axiomatic Force.", "paragraphs": "A conductor is one of the highest ranking officers in the Axiomatic hierarchy, and there are only eight known conductors in existence. Conductors are vital to the functionality of the entire Axiomatic Hivemind, and their primary responsibility is to gather energy, which they transmit to the rest of the Hivemind via an electromagnetic field. A conductor always acts within the best interests of the Hivemind. It knows no morals or mercy, and it may gather this energy from any source that will produce it. Conductors typically seek out areas where immensely powerful beings dwell or where major events are taking place, where they then extract energy with frightening precision and efficiency."},
             {"heading": "Circuit of Life.", "paragraphs": "Life is one of the most efficient sources of energy, and conductors are exceptionally well-equipped to take it. Behemoths that would threaten entire cities may be felled by a single conductor, who acts with perfect planning and has an encyclopedic knowledge of seemingly every creature in Omnaeus. A report from Guinn that was written by members of the Axiomatic Hivemind stated that conductors are so ruthless in their extraction of energy that they may even remove all memory of a being's existence in the process. Scholars speculate that conductors may be the primary cause of death in celestial societies, though no one can know for certain if conductors are capable of such summary destruction because there are no recorded incidents of anything being erased from history."}
         ],
-        "size": "Medium",
+        "size": "medium",
         "creature-type": "construct",
         "alignment": "lawful neutral",
         "cr": "20",
         "ac": "20",
-        "hit-points": "199 [21d8 + 105]",
+        "hit-points": "199 (21d8 + 105)",
         "speed": "80 ft.",
         "ability-scores": ["20", "20", "20", "24", "18", "18"],
         "proficiency-bonus": "+6",
@@ -40,7 +40,7 @@
             "immunities": ["lightning", "poison"],
             "condition immunities": ["blinded", "charmed", "deafened", "diseased", "exhaustion", "frightened", "poisoned"],
             "vulnerabilities": "",
-            "senses": "",
+            "senses": ["passive Perception 14"],
             "languages": ["Common"]
         },
         "passives": [
@@ -66,22 +66,46 @@
         "imageURL": "/images/Conductor.png"
     },
     {
-        "type": "location",
-        "title": "The Inner Machinations",
-        "link": "the-inner-machinations",
+        "type": "creature",
+        "title": "Nightcrawler",
+        "link": "nightcrawler",
         "content": [
-            {"heading": "The Axiomatic Hivemind.", "paragraphs": "The Axiomatic Hivemind exists deep within the crust of Omnaeus. It is a force of pure constants that binds the chaos of the planet together. In great underground chasms, massive continental-sized gears known as the Inner Machinations turn at a constant rate, tended to by the Axos Legion. The Axos Legion are an army of self-replicating clockworks who operate according to the Grand Design, a set of fundamental rules that was written during the birth of Omnaeus. The exact rulings of the Grand Design are unknown to any but the Axos Legion, but one can extrapolate based on their behavior. One thing is clear: the gears must always turn."},
-            {"heading": "Planetary Change.", "paragraphs": "As the gears turn, the northern and southern hemispheres of the planet twist around each other, as if the planet is split evenly from east to west. Anything that would connect the two halves of the planet that is not part of the Inner Machinations is quickly torn asunder as the planet rotates with unfathomable force around a rift known as the Fissure. The planet simultaneously rotates as a whole along an inconsistent, tilted axis that exposes different parts of the planet to various amounts of light from Omnaeus’s sun, which is known as the Sunspot. The Sunspot remains stationary. From Omnaeus, it appears to be a great bright ring in the sky, as its center is darker than the rest of it."}
+            {"heading": "Incomplete Dreams", "paragraphs": "Nightcrawlers are incomplete ideas, and their misshapen, unnatural forms are a clear indication of their uselessness. When a lucid dream is interrupted prematurely, errant thoughts of strangers and acquaintances escape into reality, manifesting from the mind's failed recreations of humans. Only the most basic shape of a humanoid is realized; a nightcrawler is nothing more than a lump of flesh upon two legs."},
+            {"heading": "Soul Searchers.", "paragraphs": "Nightcrawlers spend all of their functionally useless existences tirelessly wandering about, their wobbly legs carrying them across countless miles. A nightcrawler seeks solely to complete itself, which it can only accomplish by absorbing ideas from sentient beings. As a nightcrawler feasts upon the thoughts of those around it, it will slowly shift and change to match those thoughts, forming into another living being. With intense focus and time, one who discovers a nightcrawler could effectively turn it into any creature that one desires, but only those with the keenest minds may fully develop it into another intelligent being."},
+            {"heading": "Always Unique.", "paragraphs": "As a result of their origins, nightcrawlers are wildly inconsistent. They can vary in size and shape tremendously, but they are almost always humanoid. As a nightcrawler absorbs thoughts, it grows in size until it is large enough to transform into something else."},
+            {"heading": "Mindless Followers.", "paragraphs": "As a result of their desire to be completed, nightcrawlers always seek to follow a master. Small nightcrawlers often follow larger nightcrawlers in groups, as if they are children following their parents. However, nightcrawlers will always follow sentient creatures if there are any nearby. Nightcrawlers are completely blind to everything except thoughts, so they will always pursue those with the most creative minds. In the rare event that a nightcrawler absorbs enough ideas to become sentient, it will express its deepest devotions to the one who shaped it and follow its master's will without question."}
         ],
-        "imageURL": "/images/Inner-Machinations.jpg",
+        "size": "medium",
+        "creature-type": "aberration",
+        "alignment": "unaligned",
+        "cr": "1/4",
+        "ac": "9",
+        "hit-points": "22 (4d8 + 4)",
+        "speed": "30 ft.",
+        "ability-scores": ["6", "8", "12", "1", "1", "2"],
+        "proficiency-bonus": "+2",
         "content2": {
-            "alignment": "Lawful Neutral",
-            "leader": "The Eight Conductors",
-            "location": "Core of Omnaeus",
-            "size": "~800 million cubic miles",
-            "population": "~2 million clockwork soldiers",
-            "era": "1st of Tilt, 0 - Present"
-        }
+            "saving throws": "",
+            "proficiencies": "",
+            "resistances": "",
+            "immunities": "",
+            "condition immunities": ["blinded", "deafened", "exhaustion", "frightened"],
+            "vulnerabilities": ["psychic"],
+            "senses": ["blindsight 30 ft.", "passive Perception 5"],
+            "languages": ""
+        },
+        "passives": [
+            {"name": "Growth Mindset", "effect": "Whenever the nightcrawler increases its Dexterity modifier by 1, its AC increases by 1. Whenever the nightcrawler increases its Strength modifier by 1, its attack and damage bonuses for thump attacks increase by 1."},
+            {"name": "Psionic Aura", "effect": "Any sentient creature that starts its turn within 10 feet of the nightcrawler must succeed on a DC 11 Wisdom saving throw or take 2 (1d4) psychic damage."},
+            {"name": "Thought Conglomerate", "effect": "Whenever the nightcrawler deals psychic damage to a sentient creature, one of its lowest ability scores (chosen randomly) increases by 1. The nightcrawler completely transforms into another creature when its Constitution score is increased by this effect, maintaining its ability scores and any missing hit points."}
+        ],
+        "actions": [
+            {"name": "Thought Absorb", "effect": "Melee Weapon \n \n Attack: +3 to hit, reach 30 ft., one creature. \n \n Hit: 3 (1d4 + 1) psychic damage"},
+            {"name": "Thump", "effect": "Melee Weapon \n \n Attack: +0 to hit, reach 5 ft., one target. \n \n Hit: 0 (1d4 = 2) bludgeoning damage"}
+        ],
+        "bonus-actions": "",
+        "reactions": "",
+        "imageURL": "/images/Nightcrawler.png"
     },
     {
         "type": "location",
@@ -102,19 +126,22 @@
         "imageURL": "/images/Guinn.jpg"
     },
     {
-        "type": "encounter",
-        "title": "Prismati Deposit",
-        "link": "prismati-deposit",
+        "type": "location",
+        "title": "The Inner Machinations",
+        "link": "the-inner-machinations",
         "content": [
-            {"heading": "Tears of the Celestials.", "paragraphs": "An ore of purest brilliance, prismati is said to be the tears of the celestials themselves. When the celestial wars cracked the sky, they sent a shower of brilliance down upon Omnaeus. Prismati is the concentrated essence of all of the faith held by a particular celestial, released at once in a solid form as a celestial undergoes true death. It is unknown what use it may serve, but its very nature makes it irresistible to most."},
-            {"heading": "Irresistible Brilliance.", "paragraphs": "Upon seeing prismati, a creature must make a DC 12 Wisdom saving throw. On a success, a creature is immune to this effect for the next hour. On a failure, a creature feels compelled to acquire and possess the prismati for the next hour. A compelled creature will do what it can to acquire the prismati, but it will not do anything that it would never do otherwise, such as harming a loved one. \n \n This primati holds the essence of Trixan, a trickster celestial god who seeks to return to the Brainstorm."}
+            {"heading": "The Axiomatic Hivemind.", "paragraphs": "The Axiomatic Hivemind exists deep within the crust of Omnaeus. It is a force of pure constants that binds the chaos of the planet together. In great underground chasms, massive continental-sized gears known as the Inner Machinations turn at a constant rate, tended to by the Axos Legion. The Axos Legion are an army of self-replicating clockworks who operate according to the Grand Design, a set of fundamental rules that was written during the birth of Omnaeus. The exact rulings of the Grand Design are unknown to any but the Axos Legion, but one can extrapolate based on their behavior. One thing is clear: the gears must always turn."},
+            {"heading": "Planetary Change.", "paragraphs": "As the gears turn, the northern and southern hemispheres of the planet twist around each other, as if the planet is split evenly from east to west. Anything that would connect the two halves of the planet that is not part of the Inner Machinations is quickly torn asunder as the planet rotates with unfathomable force around a rift known as the Fissure. The planet simultaneously rotates as a whole along an inconsistent, tilted axis that exposes different parts of the planet to various amounts of light from Omnaeus’s sun, which is known as the Sunspot. The Sunspot remains stationary. From Omnaeus, it appears to be a great bright ring in the sky, as its center is darker than the rest of it."}
         ],
+        "imageURL": "/images/Inner-Machinations.jpg",
         "content2": {
-            "region": "Mountainous",
-            "level": "2",
-            "characters": "Trixan"
-        },
-        "imageURL": "/images/Prismati-Deposit.jpg"
+            "alignment": "Lawful Neutral",
+            "leader": "The Eight Conductors",
+            "location": "Core of Omnaeus",
+            "size": "~800 million cubic miles",
+            "population": "~2 million clockwork soldiers",
+            "era": "1st of Tilt, 0 - Present"
+        }
     },
     {
         "type": "encounter",
@@ -129,6 +156,21 @@
             "characters": "Grorg"
         },
         "imageURL": "/images/Grorg.png"
+    },
+    {
+        "type": "encounter",
+        "title": "Prismati Deposit",
+        "link": "prismati-deposit",
+        "content": [
+            {"heading": "Tears of the Celestials.", "paragraphs": "An ore of purest brilliance, prismati is said to be the tears of the celestials themselves. When the celestial wars cracked the sky, they sent a shower of brilliance down upon Omnaeus. Prismati is the concentrated essence of all of the faith held by a particular celestial, released at once in a solid form as a celestial undergoes true death. It is unknown what use it may serve, but its very nature makes it irresistible to most."},
+            {"heading": "Irresistible Brilliance.", "paragraphs": "Upon seeing prismati, a creature must make a DC 12 Wisdom saving throw. On a success, a creature is immune to this effect for the next hour. On a failure, a creature feels compelled to acquire and possess the prismati for the next hour. A compelled creature will do what it can to acquire the prismati, but it will not do anything that it would never do otherwise, such as harming a loved one. \n \n This primati holds the essence of Trixan, a trickster celestial god who seeks to return to the Brainstorm."}
+        ],
+        "content2": {
+            "region": "Mountainous",
+            "level": "2",
+            "characters": "Trixan"
+        },
+        "imageURL": "/images/Prismati-Deposit.jpg"
     },
     {
         "type": "item",
@@ -187,5 +229,35 @@
             "class type": "Ranger Subclass"
         },
         "imageURL": "/images/Dreamcatcher.jpg"
+    },
+    {
+        "type": "class",
+        "title": "The Contract",
+        "link": "the-contract",
+        "content": [
+            {"heading": "", "paragraphs": "You are your own patron. You follow the written word, the binding force, and the eternal promise. Your power does not come from a being, but an idea. The ideals that you serve are your own to decide, but make no mistake. The written word cannot be undone, and you bear the responsibility of ensuring that your contracts are upheld, lest the cosmos marks you a liar. Make your deals well, talk fast, buy low, sell high, get every detail on paper, and the Contract shall reward you. Should you succumb to chaos and fail to come out on top, expect no mercy from the Contract, for you'll have written your own fate."},
+            {"heading": "Expanded Spell List", "paragraphs": "The Contract lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you."},
+            {"heading": "The Contract Expanded Spells", "paragraphs":
+                [
+                    {"column1": "Spell Level", "column2": "Spells"},
+                    {"column1": "1st", "column2": "<i>command</i>, <i>compelled duel</i>"},
+                    {"column1": "2nd", "column2": "<i>silence</i>, <i>Tasha's mind whip</i>"},
+                    {"column1": "3rd", "column2": "<i>life transference</i>, <i>spirit guardians</i>"},
+                    {"column1": "4th", "column2": "<i>compulsion</i>, <i>locate creature</i>"},
+                    {"column1": "5th", "column2": "<i>dominate person</i>, <i>modify memory</i>"}
+                ],
+                "table": true
+            },
+            {"heading": "Compelling Declaration", "paragraphs": "1st-level Contract feature \n \n Your familiarity with the power of words grants you the following benefits. \n \n <b>Imposing Confidence.</b> \n \n You act with such confidence that even your enemies expect you to succeed. Whenever you make an attack roll, you can use your Charisma modifier for the attack and damage rolls instead of its typical modifier. \n \n <b>Wordsmith.</b> \n \n You know how to utilize the spiritual cosmos to enact certain rites of power. You can cast the <i>ceremony</i> spell at will, without expending a spell slot or material components. When you cast the spell, you may choose to perform this rite instead: \n \n Contract: You write a contract and have it willingly signed by all creatures that it names. If a creature signs a contract while it is under the effects of a mind-altering spell, or while it does not agree to the terms of the contract, the spell fails. If not every creature that a contract names signs it, the spell fails. A single clause of a contract must consist of an activity that a named creature must do, to the best of their ability, should a condition be met within a specified timeframe. If this condition is met, that creature has a specified amount of time to do that activity. If a creature runs out of time to do an activity as is stated in the contract, that creature loses all agency and immediately begins to fulfill the conditions of the contract as they normally would, as if they had decided to do so on their own. A creature that has lost its agency in this way is fully conscious, but has no control over what it says or does. \n \n A contract may consist of any number of clauses, but clauses that do not satisfy the listed requirements do nothing. Once a contract has been signed by all creatures that it names, its meaning is interpreted literally according to the words that are written on it. If the meaning of a clause is logically ambiguous, the clause does nothing. If any of the creatures that signed a contract die or the contract itself is destroyed, the contract loses all of its power and does nothing."},
+            {"heading": "Up the Ante", "paragraphs": "1st-level Contract feature \n \n You know how to bargain for power, and you can invest in your own success to earn even more, granting you the following benefits. \n \n <b>Ante Dice.</b> You have a pool of d4s that are known as your ante dice. The number of dice in the pool equals 1 + your warlock level. \n \n Your pool regains all expended dice when you finish a long rest. \n \n Whenever you make an attack roll, an ability check, or a saving throw that uses your Charisma modifier, you may choose to spend one of your ante dice to add a d4 to the roll. You can do so after seeing the initial roll but before any of the roll's effects occur. \n \n <b>Bountiful Returns.</b> Whenever one of your ante dice is rolled, if the affected roll changes from a failure to a success, you regain an ante die. \n \n <b>Risky Investment.</b> Whenever an ante die is about to be rolled, you can choose to spend any number of ante dice prior to the roll. All of the ante dice that you spent are also rolled, and the result is the sum of all of the ante dice minus the number of ante dice that were rolled. If you roll a one on any of the ante dice, all of the ante dice that you spent have no effect."},
+            {"heading": "Unbridled Jurisdiction", "paragraphs": "6th-level Contract feature \n \n Your devotion to semantics causes you to emit an aura of objectivity that you are unable to control. The effects of the <i>zone of truth</i> spell are centered on you at all times."},
+            {"heading": "Aspiring Entrepreneur", "paragraphs": "6th-level Contract feature \n \n You know how to invest your power in others, allowing you to profit off of their successes and failures alike using a variety of strategies. You gain the following benefits. \n \n <b>Life Insurance.</b> As a bonus action, you spend an ante die and choose a creature that you can see. The next time the target makes a saving throw, the ante die is rolled, and the result is added to the roll. This effect lasts for one round. \n \n <b>Pyramid Scheme.</b> As a bonus action, you spend an ante die and choose a creature that you can see. The next time the target makes an attack roll, the ante die is rolled, and the result is added to the roll. Whenever an ante die is rolled using this ability, if the affected roll is a success, the target can apply this effect to two other creatures it can see. Each instance of this effect lasts for one round. \n \n Whenever you are targeted by this effect, the effect does nothing, and you regain an ante die instead. \n \n Your Bountiful Returns ability does not apply to this ability. \n \n <b>Short Sell.</b> As a bonus action, you spend an ante die and choose a creature that you can see. The next time the target makes an attack roll, an ability check, or a saving throw, the ante die is rolled, and the result is subtracted from the roll. This effect lasts for one round. \n \n Whenever an ante die is rolled for this ability, if the affected roll is a failure, you regain an ante die."},
+            {"heading": "Corporate Raider", "paragraphs": "10th-level Contract feature \n \n You're powerful enough that you can aggressively dominate the market, taking advantage of weaker competitors to further your own gains. You gain the following benefits. \n \n <b>Optimized Workflow.</b> When a creature you can see is about to make an attack roll, an ability check, or a saving throw, you can spend an ante die to use one of your Aspiring Entrepreneur abilities as a reaction. \n \n <b>Reap What You Sow.</b> Whenever you make a damage roll, you can spend an ante die to add it to your roll. You regain hit points equal to the result of the ante die. \n \n <b>Undercut.</b> After a creature you can see makes a damage roll, you can spend an ante die to remove the highest damage die that was rolled."},
+            {"heading": "Soul Proprietor", "paragraphs": "14th-level Contract feature \n \n You're well-recognized as a patron of power, and you have all of the influence that comes with the title. You gain the following benefits. \n \n <b>Influential Presence.</b> You can choose which creatures are affected by your Unbridled Jurisdiction feature. \n \n <b>Self-Promotion.</b> Your ante dice turn into d6s. When you use your Risky Investment feature, you subtract two from the result for each ante die that you spend instead of one. \n \n <b>Tax Refund.</b> As a bonus action, you regain all of the ante dice that you spent on the previous round. \n \n You can't use this ability again until you finish a short or long rest."}
+        ],
+        "content2": {
+            "class type": "Warlock Subclass"
+        },
+        "imageURL": "/images/The-Contract.jpg"
     }
 ]
