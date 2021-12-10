@@ -18,6 +18,71 @@
     },
     {
         "type": "creature",
+        "title": "Celestial",
+        "link": "celestial",
+        "content": [
+            {"heading": "False Gods.", "paragraphs": "Among those who are not beholden to the traditional beholder pantheon, the celestials are often considered to be the gods responsible for the creation of all that Omnaeus has to offer. Celestials are not actually divine beings, though this fact is not known to many. They owe their power entirely to the belief that others place in them. Regardless of whether or not a creature is faithful to or respectful of a celestial, the mere acknowledgement of a celestial's existence is enough to grant it some credence."},
+            {"heading": "Beings of Faith.", "paragraphs": "A celestial with no followers wouldn't just be powerless; it wouldn't even exist. Even despite the fact that celestials are not true gods, many who are aware of this still follow them, as celestials are still capable of miracles all the same. Celestials often compete for power, though their methods for acquiring followers vary greatly. Fear and admiration alike grant the celestials power, and celestials act based on what their followers expect them to do. Because of the potential for celestials to increase in power in a positive feedback loop, competition among celestials plays a vital role in preventing a single celestial from achieving unstoppable, global influence."}
+        ],
+        "size": "colossal",
+        "creature-type": "celestial",
+        "alignment": "chaotic neutral",
+        "cr": "",
+        "ac": "",
+        "hit-points": "",
+        "speed": "",
+        "ability-scores": "",
+        "proficiency-bonus": "",
+        "content2": {
+            "saving throws": "",
+            "proficiencies": "",
+            "resistances": "",
+            "immunities": "",
+            "condition immunities": "",
+            "vulnerabilities": "",
+            "senses": "",
+            "languages": ""
+        },
+        "passives": "",
+        "actions": "",
+        "bonus-actions": "",
+        "reactions": "",
+        "imageURL": "/images/Celestial.png"
+    },
+    {
+        "type": "creature",
+        "title": "Chupacabra",
+        "link": "chupacabra",
+        "content": [
+            {"heading": "", "paragraphs": "Chupacabras are savage, hyena-like beasts with long, sharp fangs that hail from the Blight. They serve as a circulatory force for the Blightground. Chupacabras use their fangs to gorge themselves on all manner of blood, swelling up over time. When chupacabras gather in packs, their bloodlust is so great that the blood from all nearby creatures slowly begins to seep out in gaseous form. When a chupacabra is fully engorged or threatened, it drives itself into a frenzy, shedding excess blood around itself and effectively transporting blood across the Blightground. Since the Blightground is a massive, singular organism that doubles as an ecosystem, chupacabras could be considered its veins."}
+        ],
+        "size": "medium",
+        "creature-type": "beast",
+        "alignment": "chaotic evil",
+        "cr": "",
+        "ac": "",
+        "hit-points": "",
+        "speed": "",
+        "ability-scores": "",
+        "proficiency-bonus": "",
+        "content2": {
+            "saving throws": "",
+            "proficiencies": "",
+            "resistances": "",
+            "immunities": "",
+            "condition immunities": "",
+            "vulnerabilities": "",
+            "senses": "",
+            "languages": ""
+        },
+        "passives": "",
+        "actions": "",
+        "bonus-actions": "",
+        "reactions": "",
+        "imageURL": "/images/Chupacabra.png"
+    },
+    {
+        "type": "creature",
         "title": "Conductor",
         "link": "conductor",
         "content": [
@@ -67,6 +132,38 @@
     },
     {
         "type": "creature",
+        "title": "Mindelfolk",
+        "link": "mindelfolk",
+        "content": [
+            {"heading": "Story Collectors.", "paragraphs": "Mindelfolk live in simulated realities within the phantasmal abyss while their bodies remain attached to their elder brains, which are found deep underground. Within the phantasmal abyss, they endlessly share and experience stories with one another, nourishing the elder brain with ideas and creativity. On rare occasions, mindelfolk leave their underground homes to record stories from the outside world, gathering inspiration and knowledge that aids them in tending to their elder brains. In the event that an elder brain is destroyed, the anguish of its mindelfolk becomes a corrupting force. With its final thoughts, the elder brain sends nightmares from the phantasmal abyss into the primary plane, and the mindelfolk become mindflayers, driven mad with an insatiable desire to replace what was lost by consuming the minds of others."}
+        ],
+        "size": "medium",
+        "creature-type": "aberration",
+        "alignment": "lawful neutral",
+        "cr": "",
+        "ac": "",
+        "hit-points": "",
+        "speed": "",
+        "ability-scores": "",
+        "proficiency-bonus": "",
+        "content2": {
+            "saving throws": "",
+            "proficiencies": "",
+            "resistances": "",
+            "immunities": "",
+            "condition immunities": "",
+            "vulnerabilities": "",
+            "senses": "",
+            "languages": ""
+        },
+        "passives": "",
+        "actions": "",
+        "bonus-actions": "",
+        "reactions": "",
+        "imageURL": "/images/Mindelfolk.png"
+    },
+    {
+        "type": "creature",
         "title": "Nightcrawler",
         "link": "nightcrawler",
         "content": [
@@ -106,6 +203,56 @@
         "bonus-actions": "",
         "reactions": "",
         "imageURL": "/images/Nightcrawler.png"
+    },
+    {
+        "type": "creature",
+        "title": "Poltergeist",
+        "link": "poltergeist",
+        "content": [
+            {"heading": "", "paragraphs": "Poltergeists are the essence of frustration, most commonly realized from an early death. Bitter with pure resentment at its inability to accomplish whatever goal its creator sought, a poltergeist will attempt to interfere whenever anyone nearby hopes to accomplish something, often by animating objects, playing tricks, or creating startling noises. Nothing angers a poltergeist more than having its tricks foiled or ignored, and refusing to give a poltergeist attention may cause it to escalate to using lethal force. If a poltergeist is angered enough, it manifests as a wraith."},
+            {"heading": "Wraiths.", "paragraphs": "Wraiths are the essence of anger, most commonly realized from violent deaths. They are hostile to all sentient creatures, but they will most often target those who have insulted or harmed them. Wraiths often command multiple shades, who do the bidding of the wraith and attempt to spread anger."}
+        ],
+        "size": "medium",
+        "creature-type": "phantasm",
+        "alignment": "chaotic evil",
+        "cr": "",
+        "ac": "",
+        "hit-points": "",
+        "speed": "",
+        "ability-scores": "",
+        "proficiency-bonus": "",
+        "content2": {
+            "saving throws": "",
+            "proficiencies": "",
+            "resistances": "",
+            "immunities": "",
+            "condition immunities": "",
+            "vulnerabilities": "",
+            "senses": "",
+            "languages": ""
+        },
+        "passives": "",
+        "actions": "",
+        "bonus-actions": "",
+        "reactions": "",
+        "imageURL": "/images/Poltergeist.png"
+    },
+    {
+        "type": "location",
+        "title": "Fracas",
+        "link": "fracas",
+        "content": [
+            {"heading": "", "paragraphs": "In Fracas were various factions, composed of many tribes who often went to war with each other, making new enemies and alliances constantly. Over time, the people of the north began to become almost fond of war, treating it like a game. They began to try manipulating their own dreams, creating more and more advanced soldiers as things constantly escalated. Between the various other kingdoms across Omnaeus, a council had been formed in an attempt to regulate war and aid with foreign relations. Cyclopes are a race believed to be blessed by the beholder gods, and as such, a number of them were appointed to be members of this council. Known as the Council Of The One Eye, they eventually decided that the wars in the north were becoming too dangerous to the other kingdoms. Omnus Oblongus developed a weapon known as Slumber. It is a powder that can put any being to sleep upon contact. To end the wars, Omnus and the council infused an elemental with Slumber and sent it to the north, where it silenced entire armies with great storms. The effects were underestimated however, and the Slumber storms remain to this day. The wars in the north were all of a sudden put to a stop, as all life in the north was put to sleep. Battlefields in Fracas are like snapshots in time, riddled with countless slumbering warriors. Within the eerie silence, it is said that you can see the dreams and spirits of the soldiers still fighting, locked in an endless battle. The few survivors of the Slumber storms fled further to the south. Outraged with the actions of the Council Of The One Eye, they pledged themselves to Lethoc, condemning Rubilee and establishing the city of Ruckus."}
+        ],
+        "content2": {
+            "alignment": "Chaotic Neutral",
+            "leader": "The Council of the One Eye",
+            "location": "Northern Hemisphere, North of Ruckus",
+            "size": "~4 million square miles",
+            "population": "~150 million goblins, kobolds, and orcs",
+            "era": "2nd of Daz, 331 - 6345"           
+        },
+        "imageURL": "/images/Fracas.jpg"
     },
     {
         "type": "location",
@@ -185,6 +332,20 @@
             "weight": "—"
         },
         "imageURL": "/images/Deck-of-Fate.jpg"
+    },
+    {
+        "type": "item",
+        "title": "Necklace of Contested Sight",
+        "link": "necklace-of-contested-sight",
+        "content": [
+            {"heading": "Effects", "paragraphs": "Requires attunement \n \n Whenever the wearer is viewed by a divination spell, the wearer can view the caster of the divination spell as if the wearer had cast the same spell on the caster."}
+        ],
+        "content2": {
+            "rarity": "Uncommon",
+            "item-type": "Trinket",
+            "weight": "—"
+        },
+        "imageURL": "/images/Necklace-of-Contested-Sight.jpg"
     },
     {
         "type": "item",

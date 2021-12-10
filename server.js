@@ -28,12 +28,13 @@ app.get("/", function(req, res) {
 app.get("/:type/:path", function(req, res, next) {
     var type = req.params.type;
     var path = req.params.path;
+    var index = -1;
 
     for (var i = 0; i < pageData.length; i++)
         if (pageData[i].type === type && pageData[i].link === path)
             var index = i;
 
-    if (index) {
+    if (index != -1) {
         if (pageData[index].type === "creature")
             var typeCreature = true;
         else
