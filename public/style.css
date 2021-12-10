@@ -69,12 +69,6 @@ table {
 	padding: 10px 25px;
 }
 
-.footer-box {
-	display: flex;
-	justify-content: flex-end;
-	margin-top: 30px;
-}
-
 .hide {
 	display: none;
 }
@@ -83,14 +77,6 @@ table {
 	align-items: flex-start;
 	display: flex;
 	justify-items: center;
-}
-
-.layout-suggest-box {
-	background-image: url(/images/background.jpg);
-	border-radius: 25px;
-	height: 350px;
-	margin: 60px auto;
-	width: 700px;
 }
 
 .list-content {
@@ -128,25 +114,54 @@ table {
 	width: 250px;
 }
 
+.space-around {
+	justify-content: space-around;
+}
+
+.stats-box {
+    justify-content: space-between;
+}
+
 .stats-text {
 	font-size: 24px;
 	margin: 0 0 0 15px;
 	white-space: nowrap;
 }
 
-.suggestion-box-header h1 {
-	font-size: 30px;
-	text-align: center;
+.suggestion-box {
+	width: 15%;
+	margin: 10px;
 }
 
-.suggestion-box-header {
-	position: relative;
+.suggestion-box-2 {
+	width: 85%;
+	margin: 10px;
 }
 
-.text-container {
-	align-items: center;
-	display: grid;
-	justify-items: center;
+.suggestion-box-3 {
+	height: 250px;
+}
+
+.suggestion-button {
+	border-radius: 10px;
+	font-family: Outfit;
+	font-size: 24px;
+	font-weight: bold;
+	margin: 10px;
+	padding: 5px 15px;
+}
+
+.suggestion-button:hover {
+	background-color: black;
+	color: white;
+	cursor: pointer;
+}
+
+.suggestion-input {
+	font-family: Georgia;
+	font-size: 20px;
+	height: 100%;
+	width: 100%;
 }
 
 .title-container {
@@ -186,10 +201,6 @@ table {
     justify-content: center;
 }
 
-.vertical-box .horizontal-box {
-    justify-content: space-between;
-}
-
 #add-suggestion:hover {
 	background-color: #cfe2f3;
 	color: #645692;
@@ -220,11 +231,6 @@ table {
 	right: 0;
 	top: 0;
 	z-index: 1000;
-}
-
-#cancal-post:hover {
-	background-color: #000;
-	color: #FFF;
 }
 
 #header-bar {
@@ -300,47 +306,17 @@ table {
 	width: 250px;
 }
 
-#submit-post:hover {
-	background-color: #645692;
-	color: #FFF;
-}
-
 #suggestion-box {
 	bottom: 0;
 	left: 0;
+	min-width: 1250px;
 	position: fixed;
 	right: 0;
 	top: 0;
-	z-index: 1010;
+	width: 100%;
+	z-index: 1000;
 }
 
-#suggestion-title {
-	border: none;
-	border-radius: 20px;
-	font-size: 18px;
-	height: 30px;
-	text-align: center;
-	width: 500px;
-}
-
-#text-area-class {
-	border: none;
-	border-radius: 20px;
-	font-size: 18px;
-	height: 160px;
-	text-align: center;
-	width: 500px;
-}
-
-#cancal-post,#submit-post {
-	border: none;
-	border-radius: 5px;
-	font-size: 20px;
-	height: 35px;
-	margin-right: 10px;
-	width: 110px;
-}
-
-#left-column,#site-title {
+#left-column, #site-title {
 	z-index: 1;
 }

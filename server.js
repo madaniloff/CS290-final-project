@@ -32,7 +32,7 @@ app.get("/:path1/:path2", function(req, res) {
 
     for (var i = 0; i < pageData.length; i++)
         if (pageData[i].link === path2)
-            var index = i;
+            index = i;
 
     if (index != -1) {
         if (pageData[index].type === "creature")

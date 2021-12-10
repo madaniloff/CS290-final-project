@@ -1,59 +1,53 @@
-//Function to insert new links
-function insertNewLink(description, link) {
-    var context = {
-        description: description,
-        link: link
-    }
+window.addEventListener('DOMContentLoaded', function() {
+    var suggestionButton = document.getElementById('add-suggestion')
+    
+    if(suggestionButton)
+        suggestionButton.addEventListener('click', openSuggestionModal)
 
-    var newLink = Handlebars.templates.linkTemplate(context)
-    var linkContainer = document.getElementsByClassName('contentLinks')
-    linkContainer.insertAdjacentHTML('beforeend', newLink)
-}
+    var cancelButton = document.getElementById('cancel-post')
 
+    if (cancelButton)
+        cancelButton.addEventListener('click', closeSuggestionModal)
 
+    var submitButton = document.getElementById('submit-post')
+    
+    if (submitButton)
+        submitButton.addEventListener('click', addPost)
+})
 
-//+++++++++++++++++++++++++++++++++++++++++++++++++++
-
-var postHolder = "";
-
-//+++++++++++++++++++++++++++++++++++++++++++++++++++
-
-// this waits until all elements are loaded into the dom.
-
-function openSuggestionModal(){ // opens suggestion modal
+function openSuggestionModal() {
     var backdrop = document.getElementById('backdrop')
     var openSugBox = document.getElementById('suggestion-box')
 
     openSugBox.classList.remove('hide')
     backdrop.classList.remove('hide')
-
 }
 
-
-function clearTextBox(){
-    document.getElementById('text-area-class').value = ""
-}
-
-
-function closeSuggestionModal(){
-    var backdrop2 = document.getElementById('backdrop')
-    var openSugBox2 = document.getElementById('suggestion-box')
+function closeSuggestionModal() {
+    var backdrop = document.getElementById('backdrop')
+    var openSugBox = document.getElementById('suggestion-box')
     clearTextBox()
 
-    openSugBox2.classList.add('hide')
-    backdrop2.classList.add('hide')
-
+    openSugBox.classList.add('hide')
+    backdrop.classList.add('hide')
 }
-// ADD A POST 
-function postSuggestion(){
-    var title = document.getElementById('suggestion-title').value.trim()
-    var textBox = document.getElementById('text-area-class').value.trim()
-    console.log(textBox)
 
-    if (!textBox || !title){
-        alert("Please enter text in all fields...")
+function clearTextBox() {
+    var textboxes = document.getElementsByClassName('suggestion-input')
+    
+    for (let i = 0; i < textboxes.length; i++) {
+        textboxes[i].value = ""
     }
-    else{
+}
+
+function addPost() {
+    var textboxes = document.getElementsByClassName('suggestion-input')
+    var title = textboxes[0].value.trim()
+    var textBox = textboxes[1].value.trim()
+
+    if (!textBox || !title)
+        alert("Please enter text in all fields.")
+    else {
         var pagePath = window.location.pathname
         var pageType = pagePath.substring(1)
         var req = new XMLHttpRequest();
@@ -69,15 +63,11 @@ function postSuggestion(){
 
         var reqBody = JSON.stringify(suggestionObj)
 
-        console.log(reqBody)
-
-        req.addEventListener('load', function(event){
-            if(event.target.status === 200){
+        req.addEventListener('load', function(event) {
+            if (event.target.status === 200)
                 location.reload()
-            }
-            else{
+            else
                 alert("Error posting suggestion.")
-            }
         })
 
         req.setRequestHeader('Content-Type', 'application/json')
@@ -87,27 +77,3 @@ function postSuggestion(){
     clearTextBox()
     closeSuggestionModal()
 }
-
-window.addEventListener('DOMContentLoaded', function(){
-
-    var suggestionButton = document.getElementById('add-suggestion')
-    
-    if(suggestionButton){
-        console.log('clicked')
-        suggestionButton.addEventListener('click', openSuggestionModal)
-
-    }
-
-    var cancalButton = document.getElementById('cancal-post')
-    if (cancalButton){
-        cancalButton.addEventListener('click', closeSuggestionModal)
-    }
-
-
-    var submitSuggest = document.getElementById('submit-post')
-    if (submitSuggest){
-        submitSuggest.addEventListener('click',postSuggestion)
-    }
-
-
-})

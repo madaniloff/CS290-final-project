@@ -30,21 +30,37 @@
 <button type = "button" id = "add-suggestion"><i class="far fa-comment-dots"></i></button>
 
 <div id = "backdrop" class = "hide">
-    <div id = "suggestion-box" class="hide">
-        <div class = "layout-suggest-box">
-            <div class = "suggestion-box-header"> 
-                <h1>Add a Suggestion</h1>
+    <div id = "suggestion-box" class= "hide">
+        <div class = "border">
+            <div class = "title-content">
+                <h1>Create a Suggestion Post</h1>
             </div>
-                
-            <div class= "text-container">
-                <textarea id= "suggestion-title" placeholder= "Enter Suggestion Title Here"></textarea> 
-                <br>
-                <textarea id = "text-area-class" placeholder= "Enter Suggestion Here..."></textarea>
-            </div>
-
-            <div class = "footer-box">
-                <button type = "button" id = "cancal-post">Cancel</button>
-                <button type="button" id = "submit-post">Submit</button>
+            <div class = "content">
+                <div class = "vertical-box">
+                    <div class = "horizontal-box">
+                        <div class = "suggestion-box">
+                            <h2>Post Title:</h2>
+                        </div>
+                        <div class = "suggestion-box-2">
+                            <textarea class = "suggestion-input" rows = "1"></textarea>
+                        </div>
+                    </div>
+                    <div class = "horizontal-box">
+                        <div class = "suggestion-box">
+                            <h2>Post Contents:</h2>
+                        </div>
+                        <div class = "suggestion-box-2 suggestion-box-3">
+                            <textarea class = "suggestion-input"></textarea>
+                        </div>
+                    </div>
+                    <div class = "horizontal-box">
+                        <div class = "suggestion-box"></div>
+                        <div class = "horizontal-box suggestion-box-2 space-around">
+                            <button type = "button" class = "suggestion-button" id = "cancel-post">Cancel</button>
+                            <button type = "button" class = "suggestion-button" id = "submit-post">Submit</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
