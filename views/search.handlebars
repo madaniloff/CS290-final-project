@@ -1,0 +1,40 @@
+<div class = "border">
+    <div class = "title-content">
+        <h1>{{type}}</h1>
+    </div>
+
+    {{#unless listArray}}
+        <div class = "content">
+            <h1>No results.</h1>
+        </div>
+    {{/unless}}
+
+    {{#each listArray}}
+        <a class = "list-link" href = "../{{this.type}}/{{this.link}}">
+            <div class = "content list-content">
+                <img class = "list-image" src = {{this.imageURL}}>
+                <h1>{{this.title}}</h1>
+            </div>
+        </a>
+    {{/each}}
+</div>
+
+<div class = "border">
+    <div class = "title-content">
+        <h1>Community Suggestions</h1>
+    </div>
+
+    {{#unless suggestions}}
+        <div class = "content">
+            <h1>No results.</h1>
+        </div>
+    {{/unless}}
+
+    {{#each suggestions}}
+        <a class = "list-link" href = "{{this.type}}/suggestion/{{this.link}}">
+            <div class = "content list-content">
+                <h1 class = "current-suggestions capitalize">{{this.title}}</h1>
+            </div>
+        </a>
+    {{/each}}
+</div>

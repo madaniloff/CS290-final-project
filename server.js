@@ -209,6 +209,79 @@ app.post("/*/add", function(req, res) {
         res.status(400).send("Please enter suggestion content.");
 })
 
+//Search
+app.get("/search/:term", function(req, res) {
+    var term = req.params.term.toLowerCase();
+
+    var pageArray = [];
+    var suggestionArray = [];
+
+    for (let i = 0; i < pageData.length; i++)
+        pageArray.push(pageData[i]);
+    
+    for (let i = 0; i < suggestionData.length; i++)
+        suggestionArray.push(suggestionData[i]);
+
+    searchSort(pageArray, term);
+    searchSort(suggestionArray, term);
+
+    pageType = "Search Results"
+    res.status(200).render("search", {
+        listArray: pageArray,
+        suggestions: suggestionArray,
+        type: pageType
+    })
+})
+
+function searchSort(array, term) {
+    array.sort(function(a, b) {
+        a_score = searchEvaluate(a, term);
+        b_score = searchEvaluate(b, term);
+
+        if (a_score > b_score)
+            return -1;
+        else if (b_score > a_score)
+            return 1;
+        else
+            return 0;
+    });
+
+    searchFilter(array, term);
+}
+
+function searchEvaluate(post, term) {
+    var score = 0;
+    var title = post.title.toLowerCase();
+
+    //If the title matches the term exactly
+    if (title == term)
+        score += 100;
+    
+    //If the title starts with the term
+    if (title.substring(0, term.length) == term)
+        score += 50;
+
+    //If the title contains the term multiple times
+    var expression = new RegExp(term, "gi");
+    var occurrences = title.match(expression);
+
+    if (occurrences) {
+        occurrences = occurrences.length;
+        score += occurrences * 50;
+    }
+
+    return score;
+}
+
+function searchFilter(array, term) {
+    for (let i = 0; i < array.length; i++)
+        if (searchEvaluate(array[i], term) < 50) {
+            array.splice(i, 1);
+            i--;
+        }
+}
+
+//404
 app.get("*", function(req, res) {
     res.status(404).render("404", {
         path: req.url

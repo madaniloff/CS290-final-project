@@ -1,19 +1,31 @@
 window.addEventListener("DOMContentLoaded", function() {
-    var suggestionButton = document.getElementById("add-suggestion")
+    var suggestionButton = document.getElementById("add-suggestion");
     
     if(suggestionButton)
-        suggestionButton.addEventListener("click", openSuggestionModal)
+        suggestionButton.addEventListener("click", openSuggestionModal);
 
-    var cancelButton = document.getElementById("cancel-post")
+    var cancelButton = document.getElementById("cancel-post");
 
     if (cancelButton)
-        cancelButton.addEventListener("click", closeSuggestionModal)
+        cancelButton.addEventListener("click", closeSuggestionModal);
 
-    var submitButton = document.getElementById("submit-post")
-    
+    var submitButton = document.getElementById("submit-post");
+
     if (submitButton)
-        submitButton.addEventListener("click", addPost)
+        submitButton.addEventListener("click", addPost);
+
+    var input = document.getElementById("search-bar");
+
+    input.addEventListener("search", search);
 })
+
+function search() {
+    var input = document.getElementById("search-bar");
+    var url = "/search/" + input.value;
+
+    if (url != "/search/")
+        location.assign(url);
+}
 
 function openSuggestionModal() {
     var backdrop = document.getElementById("backdrop")
