@@ -1,0 +1,424 @@
+[
+    {
+        "type": "location",
+        "title": "Omnaeus",
+        "link": "omnaeus",
+        "content": [
+            {"heading":"Dreamt Into Existence.", "paragraphs":"When the great beholder Cephanox was cast out into the astral sea by a group of upstart adventurers, he was left with naught to do but sleep. In his endless slumber, he dreamt the world of Omnaeus into existence; it is a place of endless stories, manifested dreams, and inescapable nightmares."}
+        ],
+        "content2": {
+            "alignment": "Chaotic Neutral",
+            "leader": "Cephanox",
+            "location": "The Astral Sea",
+            "size": "~200 billion cubic miles",
+            "population": "~6 billion",
+            "era": "1st of Tilt, 0 - Present"
+        },
+        "imageURL": "/images/Omnaeus-2.png"
+    },
+    {
+        "type": "creature",
+        "title": "Celestial",
+        "link": "celestial",
+        "content": [
+            {"heading": "False Gods.", "paragraphs": "Among those who are not beholden to the traditional beholder pantheon, the celestials are often considered to be the gods responsible for the creation of all that Omnaeus has to offer. Celestials are not actually divine beings, though this fact is not known to many. They owe their power entirely to the belief that others place in them. Regardless of whether or not a creature is faithful to or respectful of a celestial, the mere acknowledgement of a celestial's existence is enough to grant it some credence."},
+            {"heading": "Beings of Faith.", "paragraphs": "A celestial with no followers wouldn't just be powerless; it wouldn't even exist. Even despite the fact that celestials are not true gods, many who are aware of this still follow them, as celestials are still capable of miracles all the same. Celestials often compete for power, though their methods for acquiring followers vary greatly. Fear and admiration alike grant the celestials power, and celestials act based on what their followers expect them to do. Because of the potential for celestials to increase in power in a positive feedback loop, competition among celestials plays a vital role in preventing a single celestial from achieving unstoppable, global influence."}
+        ],
+        "size": "colossal",
+        "creature-type": "celestial",
+        "alignment": "chaotic neutral",
+        "cr": "",
+        "ac": "",
+        "hit-points": "",
+        "speed": "",
+        "ability-scores": "",
+        "proficiency-bonus": "",
+        "content2": {
+            "saving throws": "",
+            "proficiencies": "",
+            "resistances": "",
+            "immunities": "",
+            "condition immunities": "",
+            "vulnerabilities": "",
+            "senses": "",
+            "languages": ""
+        },
+        "passives": "",
+        "actions": "",
+        "bonus-actions": "",
+        "reactions": "",
+        "imageURL": "/images/Celestial.png"
+    },
+    {
+        "type": "creature",
+        "title": "Chupacabra",
+        "link": "chupacabra",
+        "content": [
+            {"heading": "", "paragraphs": "Chupacabras are savage, hyena-like beasts with long, sharp fangs that hail from the Blight. They serve as a circulatory force for the Blightground. Chupacabras use their fangs to gorge themselves on all manner of blood, swelling up over time. When chupacabras gather in packs, their bloodlust is so great that the blood from all nearby creatures slowly begins to seep out in gaseous form. When a chupacabra is fully engorged or threatened, it drives itself into a frenzy, shedding excess blood around itself and effectively transporting blood across the Blightground. Since the Blightground is a massive, singular organism that doubles as an ecosystem, chupacabras could be considered its veins."}
+        ],
+        "size": "medium",
+        "creature-type": "beast",
+        "alignment": "chaotic evil",
+        "cr": "",
+        "ac": "",
+        "hit-points": "",
+        "speed": "",
+        "ability-scores": "",
+        "proficiency-bonus": "",
+        "content2": {
+            "saving throws": "",
+            "proficiencies": "",
+            "resistances": "",
+            "immunities": "",
+            "condition immunities": "",
+            "vulnerabilities": "",
+            "senses": "",
+            "languages": ""
+        },
+        "passives": "",
+        "actions": "",
+        "bonus-actions": "",
+        "reactions": "",
+        "imageURL": "/images/Chupacabra.png"
+    },
+    {
+        "type": "creature",
+        "title": "Conductor",
+        "link": "conductor",
+        "content": [
+            {"heading": "Axiomatic Force.", "paragraphs": "A conductor is one of the highest ranking officers in the Axiomatic hierarchy, and there are only eight known conductors in existence. Conductors are vital to the functionality of the entire Axiomatic Hivemind, and their primary responsibility is to gather energy, which they transmit to the rest of the Hivemind via an electromagnetic field. A conductor always acts within the best interests of the Hivemind. It knows no morals or mercy, and it may gather this energy from any source that will produce it. Conductors typically seek out areas where immensely powerful beings dwell or where major events are taking place, where they then extract energy with frightening precision and efficiency."},
+            {"heading": "Circuit of Life.", "paragraphs": "Life is one of the most efficient sources of energy, and conductors are exceptionally well-equipped to take it. Behemoths that would threaten entire cities may be felled by a single conductor, who acts with perfect planning and has an encyclopedic knowledge of seemingly every creature in Omnaeus. A report from Guinn that was written by members of the Axiomatic Hivemind stated that conductors are so ruthless in their extraction of energy that they may even remove all memory of a being's existence in the process. Scholars speculate that conductors may be the primary cause of death in celestial societies, though no one can know for certain if conductors are capable of such summary destruction because there are no recorded incidents of anything being erased from history."}
+        ],
+        "size": "medium",
+        "creature-type": "construct",
+        "alignment": "lawful neutral",
+        "cr": "20",
+        "ac": "20",
+        "hit-points": "199 (21d8 + 105)",
+        "speed": "80 ft.",
+        "ability-scores": ["20", "20", "20", "24", "18", "18"],
+        "proficiency-bonus": "+6",
+        "content2": {
+            "saving throws": ["DEX +11", "CON +11", "INT +13", "WIS +10"],
+            "proficiencies": ["athletics +11"],
+            "resistances": "",
+            "immunities": ["lightning", "poison"],
+            "condition immunities": ["blinded", "charmed", "deafened", "diseased", "exhaustion", "frightened", "poisoned"],
+            "vulnerabilities": "",
+            "senses": ["passive Perception 14"],
+            "languages": ["Common"]
+        },
+        "passives": [
+            {"name": "Constant Repairs", "effect": "At the start of the conductor's turn, the conductor regains 11 (1d12 + 5) hit points."},
+            {"name": "One of a Kind", "effect": "The conductor has a unique feature depending on which of the eight conductors it is."},
+            {"name": "Purge", "effect": "Whenever one of the conductor's features recharges, the conductor can choose a creature within 50 feet. The target must succeed on a DC 19 Dexterity saving throw or take 11 (1d12 + 5) lightning damage. On a successful save, the target takes half as much damage."}
+        ],
+        "actions": [
+            {"name": "Rapier", "effect": "Melee Weapon \n \n Attack: 1d20+11 to hit, reach 5 ft., one target. \n \n Hit: 9 (1d8 + 5) piercing damage."},
+            {"name": "Brutal Flurry \n (Recharge 5-6)", "effect": "As an action, the conductor makes ten rapier attacks. These attacks ignore all resistances and immunities."},
+            {"name": "Disarming Flourish \n (Recharge 5-6)", "effect": "As an action, the conductor makes a disarm attack against a creature within 5 feet who is wielding a melee weapon. If the attack is successful, the conductor picks up the weapon and makes five attacks with it. The conductor then makes a ranged weapon attack with it against a target within 100 feet, as if the weapon has the thrown property."},
+            {"name": "Orbital Suplex \n (Recharge 5-6)", "effect": "As an action, the conductor makes a grapple attack against a creature within 5 feet. If the grapple is successful, the target is restrained until the start of the conductor's next turn, and the conductor's Phase feature recharges. While the target is restrained by this feature, the target moves with the conductor whenever the conductor moves. A creature restrained by this feature can be freed if it or another creature within 5 feet takes an action to make a DC 19 Athletics check and succeeds."}
+        ],
+        "bonus-actions": [
+            {"name": "Rapid Update", "effect": "As a bonus action, the conductor changes its speed to be walking, burrowing, climbing, flying, or swimming speed."},
+            {"name": "Overload \n (Recharge 5-6)", "effect": "As a bonus action, the conductor gains an additional use of its action."},
+            {"name": "Recharge \n (Recharge 5-6)", "effect": "As a bonus action, the conductor recharges all of its recharge abilities."}
+        ],
+        "reactions": [
+            {"name": "Firewall \n (Recharge 5-6)", "effect": "As a reaction, the conductor adds its proficiency bonus to its AC for a turn."},
+            {"name": "Phase \n (Recharge 5-6)", "effect": "As a free reaction, the conductor teleports up to 80 feet in any direction."}
+        ],
+        "imageURL": "/images/Conductor.png"
+    },
+    {
+        "type": "creature",
+        "title": "Mindelfolk",
+        "link": "mindelfolk",
+        "content": [
+            {"heading": "Story Collectors.", "paragraphs": "Mindelfolk live in simulated realities within the phantasmal abyss while their bodies remain attached to their elder brains, which are found deep underground. Within the phantasmal abyss, they endlessly share and experience stories with one another, nourishing the elder brain with ideas and creativity. On rare occasions, mindelfolk leave their underground homes to record stories from the outside world, gathering inspiration and knowledge that aids them in tending to their elder brains. In the event that an elder brain is destroyed, the anguish of its mindelfolk becomes a corrupting force. With its final thoughts, the elder brain sends nightmares from the phantasmal abyss into the primary plane, and the mindelfolk become mindflayers, driven mad with an insatiable desire to replace what was lost by consuming the minds of others."}
+        ],
+        "size": "medium",
+        "creature-type": "aberration",
+        "alignment": "lawful neutral",
+        "cr": "",
+        "ac": "",
+        "hit-points": "",
+        "speed": "",
+        "ability-scores": "",
+        "proficiency-bonus": "",
+        "content2": {
+            "saving throws": "",
+            "proficiencies": "",
+            "resistances": "",
+            "immunities": "",
+            "condition immunities": "",
+            "vulnerabilities": "",
+            "senses": "",
+            "languages": ""
+        },
+        "passives": "",
+        "actions": "",
+        "bonus-actions": "",
+        "reactions": "",
+        "imageURL": "/images/Mindelfolk.png"
+    },
+    {
+        "type": "creature",
+        "title": "Nightcrawler",
+        "link": "nightcrawler",
+        "content": [
+            {"heading": "Incomplete Dreams", "paragraphs": "Nightcrawlers are incomplete ideas, and their misshapen, unnatural forms are a clear indication of their uselessness. When a lucid dream is interrupted prematurely, errant thoughts of strangers and acquaintances escape into reality, manifesting from the mind's failed recreations of humans. Only the most basic shape of a humanoid is realized; a nightcrawler is nothing more than a lump of flesh upon two legs."},
+            {"heading": "Soul Searchers.", "paragraphs": "Nightcrawlers spend all of their functionally useless existences tirelessly wandering about, their wobbly legs carrying them across countless miles. A nightcrawler seeks solely to complete itself, which it can only accomplish by absorbing ideas from sentient beings. As a nightcrawler feasts upon the thoughts of those around it, it will slowly shift and change to match those thoughts, forming into another living being. With intense focus and time, one who discovers a nightcrawler could effectively turn it into any creature that one desires, but only those with the keenest minds may fully develop it into another intelligent being."},
+            {"heading": "Always Unique.", "paragraphs": "As a result of their origins, nightcrawlers are wildly inconsistent. They can vary in size and shape tremendously, but they are almost always humanoid. As a nightcrawler absorbs thoughts, it grows in size until it is large enough to transform into something else."},
+            {"heading": "Mindless Followers.", "paragraphs": "As a result of their desire to be completed, nightcrawlers always seek to follow a master. Small nightcrawlers often follow larger nightcrawlers in groups, as if they are children following their parents. However, nightcrawlers will always follow sentient creatures if there are any nearby. Nightcrawlers are completely blind to everything except thoughts, so they will always pursue those with the most creative minds. In the rare event that a nightcrawler absorbs enough ideas to become sentient, it will express its deepest devotions to the one who shaped it and follow its master's will without question."}
+        ],
+        "size": "medium",
+        "creature-type": "aberration",
+        "alignment": "unaligned",
+        "cr": "1/4",
+        "ac": "9",
+        "hit-points": "22 (4d8 + 4)",
+        "speed": "30 ft.",
+        "ability-scores": ["6", "8", "12", "1", "1", "2"],
+        "proficiency-bonus": "+2",
+        "content2": {
+            "saving throws": "",
+            "proficiencies": "",
+            "resistances": "",
+            "immunities": "",
+            "condition immunities": ["blinded", "deafened", "exhaustion", "frightened"],
+            "vulnerabilities": ["psychic"],
+            "senses": ["blindsight 30 ft.", "passive Perception 5"],
+            "languages": ""
+        },
+        "passives": [
+            {"name": "Growth Mindset", "effect": "Whenever the nightcrawler increases its Dexterity modifier by 1, its AC increases by 1. Whenever the nightcrawler increases its Strength modifier by 1, its attack and damage bonuses for thump attacks increase by 1."},
+            {"name": "Psionic Aura", "effect": "Any sentient creature that starts its turn within 10 feet of the nightcrawler must succeed on a DC 11 Wisdom saving throw or take 2 (1d4) psychic damage."},
+            {"name": "Thought Conglomerate", "effect": "Whenever the nightcrawler deals psychic damage to a sentient creature, one of its lowest ability scores (chosen randomly) increases by 1. The nightcrawler completely transforms into another creature when its Constitution score is increased by this effect, maintaining its ability scores and any missing hit points."}
+        ],
+        "actions": [
+            {"name": "Thought Absorb", "effect": "Melee Weapon \n \n Attack: +3 to hit, reach 30 ft., one creature. \n \n Hit: 3 (1d4 + 1) psychic damage"},
+            {"name": "Thump", "effect": "Melee Weapon \n \n Attack: +0 to hit, reach 5 ft., one target. \n \n Hit: 0 (1d4 = 2) bludgeoning damage"}
+        ],
+        "bonus-actions": "",
+        "reactions": "",
+        "imageURL": "/images/Nightcrawler.png"
+    },
+    {
+        "type": "creature",
+        "title": "Poltergeist",
+        "link": "poltergeist",
+        "content": [
+            {"heading": "", "paragraphs": "Poltergeists are the essence of frustration, most commonly realized from an early death. Bitter with pure resentment at its inability to accomplish whatever goal its creator sought, a poltergeist will attempt to interfere whenever anyone nearby hopes to accomplish something, often by animating objects, playing tricks, or creating startling noises. Nothing angers a poltergeist more than having its tricks foiled or ignored, and refusing to give a poltergeist attention may cause it to escalate to using lethal force. If a poltergeist is angered enough, it manifests as a wraith."},
+            {"heading": "Wraiths.", "paragraphs": "Wraiths are the essence of anger, most commonly realized from violent deaths. They are hostile to all sentient creatures, but they will most often target those who have insulted or harmed them. Wraiths often command multiple shades, who do the bidding of the wraith and attempt to spread anger."}
+        ],
+        "size": "medium",
+        "creature-type": "phantasm",
+        "alignment": "chaotic evil",
+        "cr": "",
+        "ac": "",
+        "hit-points": "",
+        "speed": "",
+        "ability-scores": "",
+        "proficiency-bonus": "",
+        "content2": {
+            "saving throws": "",
+            "proficiencies": "",
+            "resistances": "",
+            "immunities": "",
+            "condition immunities": "",
+            "vulnerabilities": "",
+            "senses": "",
+            "languages": ""
+        },
+        "passives": "",
+        "actions": "",
+        "bonus-actions": "",
+        "reactions": "",
+        "imageURL": "/images/Poltergeist.png"
+    },
+    {
+        "type": "location",
+        "title": "Fracas",
+        "link": "fracas",
+        "content": [
+            {"heading": "", "paragraphs": "In Fracas were various factions, composed of many tribes who often went to war with each other, making new enemies and alliances constantly. Over time, the people of the north began to become almost fond of war, treating it like a game. They began to try manipulating their own dreams, creating more and more advanced soldiers as things constantly escalated. Between the various other kingdoms across Omnaeus, a council had been formed in an attempt to regulate war and aid with foreign relations. Cyclopes are a race believed to be blessed by the beholder gods, and as such, a number of them were appointed to be members of this council. Known as the Council Of The One Eye, they eventually decided that the wars in the north were becoming too dangerous to the other kingdoms. Omnus Oblongus developed a weapon known as Slumber. It is a powder that can put any being to sleep upon contact. To end the wars, Omnus and the council infused an elemental with Slumber and sent it to the north, where it silenced entire armies with great storms. The effects were underestimated however, and the Slumber storms remain to this day. The wars in the north were all of a sudden put to a stop, as all life in the north was put to sleep. Battlefields in Fracas are like snapshots in time, riddled with countless slumbering warriors. Within the eerie silence, it is said that you can see the dreams and spirits of the soldiers still fighting, locked in an endless battle. The few survivors of the Slumber storms fled further to the south. Outraged with the actions of the Council Of The One Eye, they pledged themselves to Lethoc, condemning Rubilee and establishing the city of Ruckus."}
+        ],
+        "content2": {
+            "alignment": "Chaotic Neutral",
+            "leader": "The Council of the One Eye",
+            "location": "Northern Hemisphere, North of Ruckus",
+            "size": "~4 million square miles",
+            "population": "~150 million goblins, kobolds, and orcs",
+            "era": "2nd of Daz, 331 - 6345"           
+        },
+        "imageURL": "/images/Fracas.jpg"
+    },
+    {
+        "type": "location",
+        "title": "Guinn",
+        "link": "guinn",
+        "content": [
+            {"heading": "Clockwork Servants.", "paragraphs": "The kingdom of Guinn was established around the Major Key, a massive clockwork key that rotates the Inner Machinations. The Axos Legion tends to those who live there, under strict orders to protect and tend to the needs of those with noble blood. In return, the nobles promise to protect the clockwork key from any who would harm it. However, due to the Axos Legion automating countless things, the rulers of Guinn are generally incompetent, but nobody cares because the clockworks handle everything."},
+            {"heading": "Pervasive Boredom.", "paragraphs": "Conflict in Guinn is a rarity, and the people will actively put themselves in danger, if only to experience something more thrilling than a life of endless luxury. Many nobles in Guinn have taken to practicing dark, forbidden arts, practicing rhetoric with fiends and sending them against their own armies. The clockworks are indifferent to their masters' actions, and the ensuing battles between devils and machines are viewed as a source of entertainment, with nobles often going to war with one another simply for bragging rights."}
+        ],
+        "content2": {
+            "alignment": "Lawful Neutral",
+            "leader": "Felix Devlin",
+            "location": "Northern Hemisphere, around the Major Key",
+            "size": "~3.5 million square miles",
+            "population": "~100 million humans, ~200 million clockwork soldiers",
+            "era": "12th of Tilt, 1245 - Present"           
+        },
+        "imageURL": "/images/Guinn.jpg"
+    },
+    {
+        "type": "location",
+        "title": "The Inner Machinations",
+        "link": "the-inner-machinations",
+        "content": [
+            {"heading": "The Axiomatic Hivemind.", "paragraphs": "The Axiomatic Hivemind exists deep within the crust of Omnaeus. It is a force of pure constants that binds the chaos of the planet together. In great underground chasms, massive continental-sized gears known as the Inner Machinations turn at a constant rate, tended to by the Axos Legion. The Axos Legion are an army of self-replicating clockworks who operate according to the Grand Design, a set of fundamental rules that was written during the birth of Omnaeus. The exact rulings of the Grand Design are unknown to any but the Axos Legion, but one can extrapolate based on their behavior. One thing is clear: the gears must always turn."},
+            {"heading": "Planetary Change.", "paragraphs": "As the gears turn, the northern and southern hemispheres of the planet twist around each other, as if the planet is split evenly from east to west. Anything that would connect the two halves of the planet that is not part of the Inner Machinations is quickly torn asunder as the planet rotates with unfathomable force around a rift known as the Fissure. The planet simultaneously rotates as a whole along an inconsistent, tilted axis that exposes different parts of the planet to various amounts of light from Omnaeus’s sun, which is known as the Sunspot. The Sunspot remains stationary. From Omnaeus, it appears to be a great bright ring in the sky, as its center is darker than the rest of it."}
+        ],
+        "imageURL": "/images/Inner-Machinations.jpg",
+        "content2": {
+            "alignment": "Lawful Neutral",
+            "leader": "The Eight Conductors",
+            "location": "Core of Omnaeus",
+            "size": "~800 million cubic miles",
+            "population": "~2 million clockwork soldiers",
+            "era": "1st of Tilt, 0 - Present"
+        }
+    },
+    {
+        "type": "encounter",
+        "title": "Grorg's Bridge",
+        "link": "grorgs-bridge",
+        "content": [
+            {"heading": "Interdimensional Ogre", "paragraphs": "Grorg is a nice ogre who guards both sides of a bridge across the river at once, believing that he is protecting travelers from a cruel ogre who waits on the other side. \n A time anomaly prevents Grorg from ever crossing the bridge to meet his other self."}
+        ],
+        "content2": {
+            "region": "River",
+            "level": "2",
+            "characters": "Grorg"
+        },
+        "imageURL": "/images/Grorg.png"
+    },
+    {
+        "type": "encounter",
+        "title": "Prismati Deposit",
+        "link": "prismati-deposit",
+        "content": [
+            {"heading": "Tears of the Celestials.", "paragraphs": "An ore of purest brilliance, prismati is said to be the tears of the celestials themselves. When the celestial wars cracked the sky, they sent a shower of brilliance down upon Omnaeus. Prismati is the concentrated essence of all of the faith held by a particular celestial, released at once in a solid form as a celestial undergoes true death. It is unknown what use it may serve, but its very nature makes it irresistible to most."},
+            {"heading": "Irresistible Brilliance.", "paragraphs": "Upon seeing prismati, a creature must make a DC 12 Wisdom saving throw. On a success, a creature is immune to this effect for the next hour. On a failure, a creature feels compelled to acquire and possess the prismati for the next hour. A compelled creature will do what it can to acquire the prismati, but it will not do anything that it would never do otherwise, such as harming a loved one. \n \n This primati holds the essence of Trixan, a trickster celestial god who seeks to return to the Brainstorm."}
+        ],
+        "content2": {
+            "region": "Mountainous",
+            "level": "2",
+            "characters": "Trixan"
+        },
+        "imageURL": "/images/Prismati-Deposit.jpg"
+    },
+    {
+        "type": "item",
+        "title": "Deck of Fate",
+        "link": "deck-of-fate",
+        "content": [
+            {"heading": "Effects", "paragraphs": "Upon drawing a card from this deck of cards, the fate of the drawer is forever shifted. Only one drawn card may take effect per person. \n \n Crown: You have friends in high places. Some choice knowledge will come your way from the master of this realm \n Sun: The world revolves around you. The gods would like your attention. \n Moon: You are attuned to the world’s greatest mysteries. You will experience what others do not. \n Star: You are a beacon of hope, warmth, and radiance. Others will rally to your cause. \n Comet: You are a fleeting rarity. Your actions will not go unnoticed. \n The Fates: The master of this realm will consult with you \n Throne: You command an aura of importance. You deserve more. \n Key: The world is open to you. You will know the way. \n Knight: You have been chosen. Guard the Deck, and it will grant you a boon. \n Gem: You are valuable. You will be protected and cherished. \n Talons: The claws dig in. You are restricted, but you know not how. \n Void: You are nothing. You will be treated as such. \n Flames: Your world will burn around you. A devil delights in your suffering. \n Skull: Death would like to make a deal. \n Idiot: Nothing has changed. \n Dungeon: The world is a dangerous place. You may encounter traps wherever you go. \n Ruin: Your greatest achievements will lie in shambles. Your name will be forever besmirched. \n Euryale: Fear can be petrifying. In crucial moments, you will fail. \n Rogue: Trust is a dangerous thing. You will be betrayed. \n Balance: All must remain in alignment. Your actions will have equal and opposite reactions. \n Fool: You know not what you are. You are prone to delusion. \n Jester: The world laughs behind your back. You are difficult to take seriously."}
+        ],
+        "content2": {
+            "rarity": "Wondrous, Very Rare",
+            "item-type": "Trinket",
+            "weight": "—"
+        },
+        "imageURL": "/images/Deck-of-Fate.jpg"
+    },
+    {
+        "type": "item",
+        "title": "Necklace of Contested Sight",
+        "link": "necklace-of-contested-sight",
+        "content": [
+            {"heading": "Effects", "paragraphs": "Requires attunement \n \n Whenever the wearer is viewed by a divination spell, the wearer can view the caster of the divination spell as if the wearer had cast the same spell on the caster."}
+        ],
+        "content2": {
+            "rarity": "Uncommon",
+            "item-type": "Trinket",
+            "weight": "—"
+        },
+        "imageURL": "/images/Necklace-of-Contested-Sight.jpg"
+    },
+    {
+        "type": "item",
+        "title": "Soul Juicer",
+        "link": "soul-juicer",
+        "content": [
+            {"heading": "Properties", "paragraphs": "Two-Handed, Heavy \n 2d6 Bludgeoning"},
+            {"heading": "Effects", "paragraphs": "You have a +1 bonus to attack rolls made with this magic weapon. \n \n When you hit with a melee attack using this magic maul and reduce the target to 0 hit points, you gain 2d6 temporary hit points."}
+        ],
+        "content2": {
+            "rarity": "Uncommon",
+            "item-type": "Maul",
+            "weight": "10 lbs."
+        },
+        "imageURL": "/images/Soul-Juicer.jpg"
+    },
+    {
+        "type": "class",
+        "title": "Dreamcatcher",
+        "link": "dreamcatcher",
+        "content": [
+            {"heading": "", "paragraphs": "Dreamcatchers attune themselves to the Astral Plane, embracing the unpredictability of nature in an attempt to fully tame it. True fishermen at heart, Dreamcatchers aspire to find and conquer the rarest creatures throughout the planes. They seek to accomplish this through mastery of an astral lure, a magical fishing line capable of traversing the planes and bringing back anything it hooks onto."},
+            {"heading": "Dreamcatcher Magic", "paragraphs": "3rd-level dreamcatcher feature \n \n You learn an additional spell when you reach certain levels in this class, as shown in the Dreamcatcher Spells table. The spell counts as a ranger spell for you, but it doesn't count against the number of ranger spells you know."},
+            {"heading": "Dreamcatcher Spells", "paragraphs":
+                [
+                    {"column1": "Ranger Level", "column2": "Spell"},
+                    {"column1": "3rd", "column2": "<i>grease</i>"},
+                    {"column1": "5th", "column2": "<i>rope trick</i>"},
+                    {"column1": "9th", "column2": "<i>tidal wave</i>"},
+                    {"column1": "13th", "column2": "<i>banishment</i>"},
+                    {"column1": "17th", "column2": "<i>maelstrom</i>"}
+                ],
+                "table": true
+            },
+            {"heading": "Astral Lure", "paragraphs": "3rd-level dreamcatcher feature \n \n You're attuned to a magical fishing line. You can use an action and expend one spell slot to cast your Astral Lure, summoning a random creature of a CR less than or equal to your character level from any plane of existence. For each spell level higher than 1st, you may see the creature that you are summoning before it is summoned, cancel the summoning, and start the summoning process over. \n \n Before casting the lure, you may magically bait it, choosing the monster type of the creature that you would like to summon. When casting the lure, roll a die from 1 to your character level. The value rolled is the CR of the creature that is summoned. Also, roll a d100. On a 1, the creature's CR is doubled. On a 100, the lure summons a random uncommon magical item instead"},
+            {"heading": "Master Fisherman", "paragraphs": "3rd-level dreamcatcher feature \n \n You know how to use your fishing skills in combat, which grants you the following benefits. \n \n <b>Spectral Hook.</b> Whenever you hit a creature with a ranged weapon attack, the target is hooked by a spectral fishing line. \n \n Whenever a hooked creature moves 1 foot, it spends 2 feet of movement. It remains hooked until it is freed by a Strength (Athletics) or Dexterity (Acrobatics) check against your spell save DC. A creature can use an action or spend half of its speed to attempt this check. \n \n You can only have one creature hooked at a time, and you cannot use your Astral Lure while you have a creature hooked. \n \n As an item interaction, you can free a creature that you have hooked. \n \n <b>Reel In.</b> As either an Attack action or a bonus action, you pull a creature that you have hooked up to 10 feet closer to you. The creature takes 1d4 magical slashing damage. \n \n If you used an action, the creature must succeed on a Strength saving throw against your spell save DC or be knocked prone. \n \n <b>Cast Out.</b> As an Attack action, you target a creature that you have hooked. The target is freed from being hooked and is launched 1d6 x 5 feet in a direction of your choice. The distance that the target travels is rolled after you choose the direction. The target must then succeed on a Dexterity saving throw against your spell save DC or be knocked prone."},
+            {"heading": "Off the Hook", "paragraphs": "7th-level dreamcatcher feature \n \n You've mastered your ability to contend with a single, struggling opponent. When a creature that you have hooked with your astral fishing line is about to make an attack, you can use Cast Out as a reaction before the attack is made"},
+            {"heading": "Ascendant Angler", "paragraphs": "11th-level Dreamcatcher feature \n \n You have a technique for catching nearly any foe, which grants you the following benefits. \n \n <b>Catch of the Day.</b> You can now have the same creature hooked multiple times. Whenever a creature would be freed from being hooked, it is instead freed from only one hook. Whenever you target a creature with Reel In or Cast Out, you can repeat the same effect on the same creature for each additional hook that it is hooked by. \n \n <b>No Escape.</b> Your ranged weapon attacks weave in and out of the Astral Plane as they are made, allowing for them to pass through solid materials. Your ranged weapon attacks ignore all benefits provided by total cover or less. \n \n When you use Reel In or Cast Out, you can pull or launch the target directly through solid materials. If this ability causes a creature to occupy the same space as a solid object, the creature moves to the closest available space. \n \n <b>Plenty of Fish.</b> You can now have an unlimited number of creatures hooked at the same time. Whenever you use Reel In or Cast Out, you can target up to all of the creatures that you have hooked at once."},
+            {"heading": "Binding Constellation", "paragraphs": "15th-level dreamcatcher feature \n \n You can trap enemies in an astral net. As an action, you can deploy a number of tethers up to your Wisdom modifier (minimum of three tethers), placing each of them in different spaces within 20 feet of you. These tethers last until this feature can be used again, at which point they dissipate. \n \n As a bonus action, you can move a tether that is within 20 feet of you to another space within 20 feet of you. \n \n All of the tethers are connected to each other by ethereal walls of magical energy that are 5 feet high and 1 foot thick. Whenever a creature of your choice starts its turn while surrounded by these walls on at least three sides, it must make a Charisma saving throw against your spell save DC. On a failure, it is restrained until the start of its next turn. \n \n Once you use this feature, you can't use it again until you finish a short rest."}
+        ],
+        "content2": {
+            "class type": "Ranger Subclass"
+        },
+        "imageURL": "/images/Dreamcatcher.jpg"
+    },
+    {
+        "type": "class",
+        "title": "The Contract",
+        "link": "the-contract",
+        "content": [
+            {"heading": "", "paragraphs": "You are your own patron. You follow the written word, the binding force, and the eternal promise. Your power does not come from a being, but an idea. The ideals that you serve are your own to decide, but make no mistake. The written word cannot be undone, and you bear the responsibility of ensuring that your contracts are upheld, lest the cosmos marks you a liar. Make your deals well, talk fast, buy low, sell high, get every detail on paper, and the Contract shall reward you. Should you succumb to chaos and fail to come out on top, expect no mercy from the Contract, for you'll have written your own fate."},
+            {"heading": "Expanded Spell List", "paragraphs": "The Contract lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you."},
+            {"heading": "The Contract Expanded Spells", "paragraphs":
+                [
+                    {"column1": "Spell Level", "column2": "Spells"},
+                    {"column1": "1st", "column2": "<i>command</i>, <i>compelled duel</i>"},
+                    {"column1": "2nd", "column2": "<i>silence</i>, <i>Tasha's mind whip</i>"},
+                    {"column1": "3rd", "column2": "<i>life transference</i>, <i>spirit guardians</i>"},
+                    {"column1": "4th", "column2": "<i>compulsion</i>, <i>locate creature</i>"},
+                    {"column1": "5th", "column2": "<i>dominate person</i>, <i>modify memory</i>"}
+                ],
+                "table": true
+            },
+            {"heading": "Compelling Declaration", "paragraphs": "1st-level Contract feature \n \n Your familiarity with the power of words grants you the following benefits. \n \n <b>Imposing Confidence.</b> \n \n You act with such confidence that even your enemies expect you to succeed. Whenever you make an attack roll, you can use your Charisma modifier for the attack and damage rolls instead of its typical modifier. \n \n <b>Wordsmith.</b> \n \n You know how to utilize the spiritual cosmos to enact certain rites of power. You can cast the <i>ceremony</i> spell at will, without expending a spell slot or material components. When you cast the spell, you may choose to perform this rite instead: \n \n Contract: You write a contract and have it willingly signed by all creatures that it names. If a creature signs a contract while it is under the effects of a mind-altering spell, or while it does not agree to the terms of the contract, the spell fails. If not every creature that a contract names signs it, the spell fails. A single clause of a contract must consist of an activity that a named creature must do, to the best of their ability, should a condition be met within a specified timeframe. If this condition is met, that creature has a specified amount of time to do that activity. If a creature runs out of time to do an activity as is stated in the contract, that creature loses all agency and immediately begins to fulfill the conditions of the contract as they normally would, as if they had decided to do so on their own. A creature that has lost its agency in this way is fully conscious, but has no control over what it says or does. \n \n A contract may consist of any number of clauses, but clauses that do not satisfy the listed requirements do nothing. Once a contract has been signed by all creatures that it names, its meaning is interpreted literally according to the words that are written on it. If the meaning of a clause is logically ambiguous, the clause does nothing. If any of the creatures that signed a contract die or the contract itself is destroyed, the contract loses all of its power and does nothing."},
+            {"heading": "Up the Ante", "paragraphs": "1st-level Contract feature \n \n You know how to bargain for power, and you can invest in your own success to earn even more, granting you the following benefits. \n \n <b>Ante Dice.</b> You have a pool of d4s that are known as your ante dice. The number of dice in the pool equals 1 + your warlock level. \n \n Your pool regains all expended dice when you finish a long rest. \n \n Whenever you make an attack roll, an ability check, or a saving throw that uses your Charisma modifier, you may choose to spend one of your ante dice to add a d4 to the roll. You can do so after seeing the initial roll but before any of the roll's effects occur. \n \n <b>Bountiful Returns.</b> Whenever one of your ante dice is rolled, if the affected roll changes from a failure to a success, you regain an ante die. \n \n <b>Risky Investment.</b> Whenever an ante die is about to be rolled, you can choose to spend any number of ante dice prior to the roll. All of the ante dice that you spent are also rolled, and the result is the sum of all of the ante dice minus the number of ante dice that were rolled. If you roll a one on any of the ante dice, all of the ante dice that you spent have no effect."},
+            {"heading": "Unbridled Jurisdiction", "paragraphs": "6th-level Contract feature \n \n Your devotion to semantics causes you to emit an aura of objectivity that you are unable to control. The effects of the <i>zone of truth</i> spell are centered on you at all times."},
+            {"heading": "Aspiring Entrepreneur", "paragraphs": "6th-level Contract feature \n \n You know how to invest your power in others, allowing you to profit off of their successes and failures alike using a variety of strategies. You gain the following benefits. \n \n <b>Life Insurance.</b> As a bonus action, you spend an ante die and choose a creature that you can see. The next time the target makes a saving throw, the ante die is rolled, and the result is added to the roll. This effect lasts for one round. \n \n <b>Pyramid Scheme.</b> As a bonus action, you spend an ante die and choose a creature that you can see. The next time the target makes an attack roll, the ante die is rolled, and the result is added to the roll. Whenever an ante die is rolled using this ability, if the affected roll is a success, the target can apply this effect to two other creatures it can see. Each instance of this effect lasts for one round. \n \n Whenever you are targeted by this effect, the effect does nothing, and you regain an ante die instead. \n \n Your Bountiful Returns ability does not apply to this ability. \n \n <b>Short Sell.</b> As a bonus action, you spend an ante die and choose a creature that you can see. The next time the target makes an attack roll, an ability check, or a saving throw, the ante die is rolled, and the result is subtracted from the roll. This effect lasts for one round. \n \n Whenever an ante die is rolled for this ability, if the affected roll is a failure, you regain an ante die."},
+            {"heading": "Corporate Raider", "paragraphs": "10th-level Contract feature \n \n You're powerful enough that you can aggressively dominate the market, taking advantage of weaker competitors to further your own gains. You gain the following benefits. \n \n <b>Optimized Workflow.</b> When a creature you can see is about to make an attack roll, an ability check, or a saving throw, you can spend an ante die to use one of your Aspiring Entrepreneur abilities as a reaction. \n \n <b>Reap What You Sow.</b> Whenever you make a damage roll, you can spend an ante die to add it to your roll. You regain hit points equal to the result of the ante die. \n \n <b>Undercut.</b> After a creature you can see makes a damage roll, you can spend an ante die to remove the highest damage die that was rolled."},
+            {"heading": "Soul Proprietor", "paragraphs": "14th-level Contract feature \n \n You're well-recognized as a patron of power, and you have all of the influence that comes with the title. You gain the following benefits. \n \n <b>Influential Presence.</b> You can choose which creatures are affected by your Unbridled Jurisdiction feature. \n \n <b>Self-Promotion.</b> Your ante dice turn into d6s. When you use your Risky Investment feature, you subtract two from the result for each ante die that you spend instead of one. \n \n <b>Tax Refund.</b> As a bonus action, you regain all of the ante dice that you spent on the previous round. \n \n You can't use this ability again until you finish a short or long rest."}
+        ],
+        "content2": {
+            "class type": "Warlock Subclass"
+        },
+        "imageURL": "/images/The-Contract.jpg"
+    }
+]
