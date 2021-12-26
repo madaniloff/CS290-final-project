@@ -1,0 +1,73 @@
+<div class = "border">
+    <div class = "title-content">
+        <h1>{{type}}</h1>
+    </div>
+
+    {{#each listArray}}
+        <a class = "list-link" href = "../{{this.type}}/{{this.link}}">
+            <div class = "content list-content">
+                <img class = "list-image" src = {{this.imageURL}}>
+                <h1>{{this.title}}</h1>
+            </div>
+        </a>
+    {{/each}}
+</div>
+
+<div class = "border">
+    <div class = "title-content">
+        <h1>Community Suggestions</h1>
+    </div>
+
+    {{#unless suggestions}}
+        <div class = "content">
+            <h1>Nobody has made any suggestions yet.</h1>
+        </div>
+    {{/unless}}
+
+    {{#each suggestions}}
+        <a class = "list-link" href = "{{this.type}}/suggestion/{{this.link}}">
+            <div class = "content list-content">
+                <h1 class = "current-suggestions capitalize">{{this.title}}</h1>
+            </div>
+        </a>
+    {{/each}}
+</div>
+
+<button type = "button" id = "add-suggestion"><i class="far fa-comment-dots"></i></button>
+
+<div id = "backdrop" class = "hide">
+    <div id = "suggestion-box" class= "hide">
+        <div class = "border">
+            <div class = "title-content">
+                <h1>Create a Suggestion Post</h1>
+            </div>
+            <div class = "content">
+                <div class = "vertical-box">
+                    <div class = "horizontal-box">
+                        <div class = "suggestion-box">
+                            <h2>Post Title:</h2>
+                        </div>
+                        <div class = "suggestion-box-2">
+                            <input class = "suggestion-input"></input>
+                        </div>
+                    </div>
+                    <div class = "horizontal-box">
+                        <div class = "suggestion-box">
+                            <h2>Post Contents:</h2>
+                        </div>
+                        <div class = "suggestion-box-2 suggestion-box-3">
+                            <textarea class = "suggestion-input"></textarea>
+                        </div>
+                    </div>
+                    <div class = "horizontal-box">
+                        <div class = "suggestion-box"></div>
+                        <div class = "horizontal-box suggestion-box-2 space-around">
+                            <button type = "button" class = "suggestion-button" id = "cancel-post">Cancel</button>
+                            <button type = "button" class = "suggestion-button" id = "submit-post">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

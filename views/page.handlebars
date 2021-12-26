@@ -1,0 +1,42 @@
+<div class = "border">
+    <div class = "title-content">
+        <h1>{{pageData.title}}</h1>
+    </div>
+
+    <div class = "horizontal-box">
+        <div id = "left-column">
+            {{#each pageData.content}}
+                <div class = "content">
+                    <h2>{{this.heading}}</h2>
+                    {{#unless this.table}}
+                        <p>{{{this.paragraphs}}}</p>
+                    {{else}}
+                        <table class = "main-table">
+                            {{#each this.paragraphs}}
+                                <tr>
+                                    <th>{{{column1}}}</th>
+                                    <th>{{{column2}}}</th>
+                                </tr>
+                            {{/each}}
+                        </table>
+                    {{/unless}}
+                </div>
+            {{/each}}
+
+            {{#if typeCreature}}
+                {{> creatures-main pageData}}
+            {{/if}}
+        </div>
+        <div id = "right-column">
+            <div class = "content vertical-box">
+                <img class = "post-image" src = {{pageData.imageURL}}>
+
+                {{#if typeCreature}}
+                    {{> creature pageData}}
+                {{else}}
+                    {{> stats pageData}}
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</div>
