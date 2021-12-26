@@ -1,0 +1,51 @@
+{{#if passives}}
+    <div class = "title-content">
+        <h1>Passives</h1>
+    </div>
+{{/if}}
+
+{{#each passives}}
+    <div class = "content">
+        <h2>{{this.name}}</h2>
+        <p>{{this.effect}}</p>
+    </div>
+{{/each}}
+
+{{#if actions}}
+    <div class = "title-content">
+        <h1>Actions</h1>
+    </div>
+{{/if}}
+
+{{#each actions}}
+    <div class = "content">
+        <h2>{{this.name}}</h2>
+        <p>{{this.effect}}</p>
+    </div>
+{{/each}}
+
+{{#if bonus-actions}}
+    <div class = "title-content">
+        <h1>Bonus Actions</h1>
+    </div>
+{{/if}}
+
+{{#each bonus-actions}}
+    <div class = "content">
+        <h2>{{this.name}}</h2>
+        <p>{{this.effect}}</p>
+    </div>
+{{/each}}
+
+{{#if reactions}}
+    <div class = "title-content">
+        <h1>Reactions</h1>
+    </div>
+{{/if}}
+
+{{#each reactions}}
+    <div class = "content">
+        <h2>{{this.name}}</h2>
+        <p>{{this.effect}}</p>
+    </div>
+{{/each}}

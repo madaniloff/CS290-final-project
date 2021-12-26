@@ -1,0 +1,50 @@
+<h2>{{size}} {{creature-type}}, {{alignment}}</h2>
+
+{{#if cr}}
+    <h2>CR: {{cr}}</h2>
+{{/if}}
+
+{{#if ac}}
+    <h2>AC: {{ac}}</h2>
+{{/if}}
+
+{{#if hit-points}}
+    <h2>Hit Points: {{hit-points}}</h2>
+{{/if}}
+
+{{#if speed}}
+    <h2>Speed: {{speed}}</h2>
+{{/if}}
+
+{{#if ability-scores}}
+    <table class = "main-table">
+        <tr>
+            <th>STR</th>
+            <th>DEX</th>
+            <th>CON</th>
+            <th>INT</th>
+            <th>WIS</th>
+            <th>CHA</th>
+        </tr>
+        <tr>
+            {{#each ability-scores}}
+                <th>{{{this}}}</th>
+            {{/each}}
+        </tr>
+    </table>
+{{/if}}
+
+{{#if proficiency-bonus}}
+    <h2>Proficiency Bonus: {{proficiency-bonus}}</h2>
+{{/if}}
+
+{{#each content2}}
+    {{#if this}}
+        <h2>{{@key}}:</h2>
+        <table>
+            {{#each this}}
+                <tr><th>{{{this}}}</th></tr>
+            {{/each}}
+        </table>
+    {{/if}}
+{{/each}}
